@@ -25,7 +25,7 @@ dump:
 
 
 font:
-	mkdir ./font/
+	mkdir -p ./font/
 	./node_modules/.bin/svg-font-create -c config.yml -i ./src/svg -o "./font/$(FONT_NAME).svg"
 	#fontforge -c 'font = fontforge.open("./font/$(FONT_NAME).svg"); font.generate("./font/$(FONT_NAME).ttf")'
 	./node_modules/.bin/svg2ttf "./font/$(FONT_NAME).svg" "./font/$(FONT_NAME).ttf"
