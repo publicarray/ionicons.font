@@ -1,0 +1,4408 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%.
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: Ben Sperry
+  homepage: http://ionicons.com/
+  twitter: https://twitter.com/benjsperry/
+  github: https://github.com/driftyco/ionicons/
+  license: MIT
+  #license_url: http://creativecommons.org/licenses/by/3.0/
+
+  css_prefix_text: "icon-"
+  columns: 4
+
+# transform:
+# baseline: 0.125
+#  rescale: 1.053
+#  # offset: -0.05
+
+
+font:
+  version: "3.0"
+
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: ionicons
+
+  fullname: ionicons
+  familyname: ionicons
+
+  copyright: Copyright (c) 2015-present Ionic (http://ionic.io/)
+
+  # ascent: 448
+  # descent: 64
+  ascent: 850
+  descent: 150
+  weight: "Regular"
+
+
+glyphs:
+  - css: "ios-add-circle-outline"
+    code: 0xF100
+    uid: beb449874399f824aadb278575315d26
+    search: []
+
+  - css: "ios-add-circle"
+    code: 0xF101
+    uid: ed9863bec6fa6cfc4e606b64b93e4a59
+    search: []
+
+  - css: "ios-add"
+    code: 0xF102
+    uid: 6161478d9d2e1e04056afbb612c2bc2f
+    search: []
+
+  - css: "ios-alarm-outline"
+    code: 0xF3C7
+    uid: e764bd885949495f350c790295ba13b5
+    search: []
+
+  - css: "ios-alarm"
+    code: 0xF3C8
+    uid: 6e56524c68b5fd32b20c561e7d37b9b4
+    search: []
+
+  - css: "ios-albums-outline"
+    code: 0xF3C9
+    uid: 94145599a29ede7d36b50d6ba80c4f10
+    search: []
+
+  - css: "ios-albums"
+    code: 0xF3CA
+    uid: 58877b573c43403007304332a76c73e1
+    search: []
+
+  - css: "ios-alert-outline"
+    code: 0xF103
+    uid: 2c6059e8b938d907d56bf5cbc6cf677d
+    search: []
+
+  - css: "ios-alert"
+    code: 0xF104
+    uid: 292d6c48ec8a55cf1093339ede8b6b93
+    search: []
+
+  - css: "ios-american-football-outline"
+    code: 0xF105
+    uid: 88e1c206b7d590c0173d43856a6a82d3
+    search: []
+
+  - css: "ios-american-football"
+    code: 0xF106
+    uid: b3d093f57b008c02a617b4a3c4a91072
+    search: []
+
+  - css: "ios-analytics-outline"
+    code: 0xF3CD
+    uid: c30caa7ea7a2f61be5d1351baacba7d4
+    search: []
+
+  - css: "ios-analytics"
+    code: 0xF3CE
+    uid: 74c587ad88c0085a3ebb51123e221403
+    search: []
+
+  - css: "ios-aperture-outline"
+    code: 0xF107
+    uid: 6a80315a95da8db09ad4c3179af66685
+    search: []
+
+  - css: "ios-aperture"
+    code: 0xF108
+    uid: 468840d9588ed4d5b956140137616fa5
+    search: []
+
+  - css: "ios-apps-outline"
+    code: 0xF109
+    uid: 478963cc4d2b207145dc9d2729903c11
+    search: []
+
+  - css: "ios-apps"
+    code: 0xF10A
+    uid: 5effbb780697ce749c6a0acd2e7db714
+    search: []
+
+  - css: "ios-appstore-outline"
+    code: 0xF10B
+    uid: 375cabcecf1becee51e2e4dbe422d7cd
+    search: []
+
+  - css: "ios-appstore"
+    code: 0xF10C
+    uid: d928f35c27abea3c494cd9140117dd59
+    search: []
+
+  - css: "ios-archive-outline"
+    code: 0xF10D
+    uid: d87fb619c7e09d97371e647f5549f62f
+    search: []
+
+  - css: "ios-archive"
+    code: 0xF10E
+    uid: 5876b50378af7d728b379bd23167ba67
+    search: []
+
+  - css: "ios-arrow-back"
+    code: 0xF3CF
+    uid: 0472e4284687be5881df55167e961ae0
+    search: []
+
+  - css: "ios-arrow-down"
+    code: 0xF3D0
+    uid: 64cd31e83da036c851f3b4884ab8c991
+    search: []
+
+  - css: "ios-arrow-dropdown-circle"
+    code: 0xF10F
+    uid: 9592bd3fbbeca90c0f55a7e8f128b9bb
+    search: []
+
+  - css: "ios-arrow-dropdown"
+    code: 0xF110
+    uid: 021b8c0c2c644935302f72791fb2c8d2
+    search: []
+
+  - css: "ios-arrow-dropleft-circle"
+    code: 0xF111
+    uid: 7b8c595f585ffe80d9cb928df79a824d
+    search: []
+
+  - css: "ios-arrow-dropleft"
+    code: 0xF112
+    uid: 508039c13f8f781faa94c40fd5ec122c
+    search: []
+
+  - css: "ios-arrow-dropright-circle"
+    code: 0xF113
+    uid: 2612a98d31e8eb7bdf64341762aea347
+    search: []
+
+  - css: "ios-arrow-dropright"
+    code: 0xF114
+    uid: 1cefab9976a9efb48f17b041ce5508ed
+    search: []
+
+  - css: "ios-arrow-dropup-circle"
+    code: 0xF115
+    uid: a76b310e6be5539fea4abb5210a0e779
+    search: []
+
+  - css: "ios-arrow-dropup"
+    code: 0xF116
+    uid: 74e972a391ce209f0ab51303b6a56674
+    search: []
+
+  - css: "ios-arrow-forward"
+    code: 0xF3D1
+    uid: 83d47f661ce5be2fa44dabb7f6ce489f
+    search: []
+
+  - css: "ios-arrow-round-back"
+    code: 0xF117
+    uid: 9d04f562b55631740ace6f4bd82f967c
+    search: []
+
+  - css: "ios-arrow-round-down"
+    code: 0xF118
+    uid: 5968aefbded8fb991b7211e792a7f36c
+    search: []
+
+  - css: "ios-arrow-round-forward"
+    code: 0xF119
+    uid: 11dc6ee0e639ffae9a743faff0e46e99
+    search: []
+
+  - css: "ios-arrow-round-up"
+    code: 0xF11A
+    uid: 2bb631c93ce046ad9f88f4eee497b8c3
+    search: []
+
+  - css: "ios-arrow-up"
+    code: 0xF3D8
+    uid: ba1f6737305247444e7c8fe6197b9ec2
+    search: []
+
+  - css: "ios-at-outline"
+    code: 0xF3D9
+    uid: 74a34db6dc42c1056b03040bc92ab492
+    search: []
+
+  - css: "ios-at"
+    code: 0xF3DA
+    uid: c2524f67c3d8bdd82199a5081aada61f
+    search: []
+
+  - css: "ios-attach"
+    code: 0xF11B
+    uid: cfb99a80498bf086d14694a7229dd6f1
+    search: []
+
+  - css: "ios-backspace-outline"
+    code: 0xF11C
+    uid: 8fa4f20375bb558eca223fe35236de91
+    search: []
+
+  - css: "ios-backspace"
+    code: 0xF11D
+    uid: 2004f4660c759e9d2738c4eb4309ef45
+    search: []
+
+  - css: "ios-barcode-outline"
+    code: 0xF3DB
+    uid: 706f22c8ec684129610e7e6954c69167
+    search: []
+
+  - css: "ios-barcode"
+    code: 0xF3DC
+    uid: fd2604defca132571ed832b864ad93c3
+    search: []
+
+  - css: "ios-baseball-outline"
+    code: 0xF3DD
+    uid: c0c50baddeffcb9da84ade5e0835f268
+    search: []
+
+  - css: "ios-baseball"
+    code: 0xF3DE
+    uid: 3f4334154a21f1a9817b1980aabc12d8
+    search: []
+
+  - css: "ios-basket-outline"
+    code: 0xF11E
+    uid: 924678595124c91b61980c175bb91b74
+    search: []
+
+  - css: "ios-basket"
+    code: 0xF11F
+    uid: cfd3ce46444104f67a282b776a15e807
+    search: []
+
+  - css: "ios-basketball-outline"
+    code: 0xF3DF
+    uid: 8564abe608a685319bf500e96c6fe5bc
+    search: []
+
+  - css: "ios-basketball"
+    code: 0xF3E0
+    uid: b1dc399a24823cb289c2dc65b89957f9
+    search: []
+
+  - css: "ios-battery-charging"
+    code: 0xF120
+    uid: 2998959596095d374438fd3f3963cd9d
+    search: []
+
+  - css: "ios-battery-dead"
+    code: 0xF121
+    uid: fa78937311903486f2c31276f15c4048
+    search: []
+
+  - css: "ios-battery-full"
+    code: 0xF122
+    uid: e4f30654bbab41131e458abc3802aa98
+    search: []
+
+  - css: "ios-beaker-outline"
+    code: 0xF123
+    uid: eead33b333424711704f0f6f2fc64a51
+    search: []
+
+  - css: "ios-beaker"
+    code: 0xF124
+    uid: 62e2fc021e57530067a055726b707270
+    search: []
+
+  - css: "ios-beer-outline"
+    code: 0xF125
+    uid: 106c84d1e254f717e55e5b14be2ecf44
+    search: []
+
+  - css: "ios-beer"
+    code: 0xF126
+    uid: 51b5661130317a653f365c31d2afe013
+    search: []
+
+  - css: "ios-bicycle"
+    code: 0xF127
+    uid: df9318632621f6205d0b2e1ff13547ec
+    search: []
+
+  - css: "ios-bluetooth"
+    code: 0xF128
+    uid: 91f998780e397a7375c0a31861de9af5
+    search: []
+
+  - css: "ios-boat-outline"
+    code: 0xF129
+    uid: a893d9c4ab3e61627062445fb9cea74f
+    search: []
+
+  - css: "ios-boat"
+    code: 0xF12A
+    uid: 7a34174992e39d155b1b680970b3f01b
+    search: []
+
+  - css: "ios-body-outline"
+    code: 0xF3E3
+    uid: 00003d44c952203c4a09c99eb8822c79
+    search: []
+
+  - css: "ios-body"
+    code: 0xF3E4
+    uid: 3c00691a61fffc365ea660886b628b2d
+    search: []
+
+  - css: "ios-bonfire-outline"
+    code: 0xF12B
+    uid: 584d7e8f85a707a22300fe8615f22836
+    search: []
+
+  - css: "ios-bonfire"
+    code: 0xF12C
+    uid: 5926907dc5f569ca6e25ae0b278ad58b
+    search: []
+
+  - css: "ios-book-outline"
+    code: 0xF3E7
+    uid: 773f53db46403edfb0e88e0e5b2a5455
+    search: []
+
+  - css: "ios-book"
+    code: 0xF3E8
+    uid: cbe0b7b8c2f41ce1fd1685e8d2142541
+    search: []
+
+  - css: "ios-bookmark-outline"
+    code: 0xF12D
+    uid: 3fbe1aed42cfa60dd8c5f849869f67b7
+    search: []
+
+  - css: "ios-bookmark"
+    code: 0xF12E
+    uid: 9a08e341da46783e5a764c824ac5d8ef
+    search: []
+
+  - css: "ios-bookmarks-outline"
+    code: 0xF3E9
+    uid: 6699d43f99a62b4bdbb4b09ffabab839
+    search: []
+
+  - css: "ios-bookmarks"
+    code: 0xF3EA
+    uid: 6ac979b67f1221af461ca686b011c9a4
+    search: []
+
+  - css: "ios-bowtie-outline"
+    code: 0xF12F
+    uid: 8a91e1ed01aac428c886e054a877f08e
+    search: []
+
+  - css: "ios-bowtie"
+    code: 0xF130
+    uid: b8387807cb7138a33ba060ab9faa9930
+    search: []
+
+  - css: "ios-briefcase-outline"
+    code: 0xF3ED
+    uid: c2f73e5f1a981faa386d2cef1f19a0a0
+    search: []
+
+  - css: "ios-briefcase"
+    code: 0xF3EE
+    uid: 2c9465c9eef67277ab2b82374160dacf
+    search: []
+
+  - css: "ios-browsers-outline"
+    code: 0xF3EF
+    uid: 51d5e957f3f54bc3624141275c7b757c
+    search: []
+
+  - css: "ios-browsers"
+    code: 0xF3F0
+    uid: 434a05b3d42e2e96320236753ff11778
+    search: []
+
+  - css: "ios-brush-outline"
+    code: 0xF131
+    uid: 8ee8367ea2b8c1d98ab3ece8aef08468
+    search: []
+
+  - css: "ios-brush"
+    code: 0xF132
+    uid: d3c348b0afbb03a59919970cbe6ea5e7
+    search: []
+
+  - css: "ios-bug-outline"
+    code: 0xF133
+    uid: 7d8fff57b9b122c450e2b8b3b816f0cc
+    search: []
+
+  - css: "ios-bug"
+    code: 0xF134
+    uid: d439a8bf5546243bac4468418fc6ca8e
+    search: []
+
+  - css: "ios-build-outline"
+    code: 0xF135
+    uid: 82681233fa5a946d7abb41264564d32a
+    search: []
+
+  - css: "ios-build"
+    code: 0xF136
+    uid: 1fcc7a808fb2e64d556bee8ffa87aee8
+    search: []
+
+  - css: "ios-bulb-outline"
+    code: 0xF137
+    uid: 105cebcad262a61166035c8970e181cb
+    search: []
+
+  - css: "ios-bulb"
+    code: 0xF138
+    uid: 279d423755e4b26db1efff68afb59d96
+    search: []
+
+  - css: "ios-bus-outline"
+    code: 0xF139
+    uid: 1ca69d945c8610fc7e7ffe2d8ab57a92
+    search: []
+
+  - css: "ios-bus"
+    code: 0xF13A
+    uid: a3f243caf37346722ff1b56412b99f8c
+    search: []
+
+  - css: "ios-cafe-outline"
+    code: 0xF13B
+    uid: 0a397a7bbee3a419330ed69518ef9dfb
+    search: []
+
+  - css: "ios-cafe"
+    code: 0xF13C
+    uid: d4de21094379678626b3798b14b48639
+    search: []
+
+  - css: "ios-calculator-outline"
+    code: 0xF3F1
+    uid: 6eba6c67cdec16c7f0603bee6aaad10d
+    search: []
+
+  - css: "ios-calculator"
+    code: 0xF3F2
+    uid: e3b3295c6012f54bf37578eb2671b9fd
+    search: []
+
+  - css: "ios-calendar-outline"
+    code: 0xF3F3
+    uid: 5d91ea9f4ad5981d0097ff2e14e6cd59
+    search: []
+
+  - css: "ios-calendar"
+    code: 0xF3F4
+    uid: 1dd43408b2ba2233be187bdcdd8df0e1
+    search: []
+
+  - css: "ios-call-outline"
+    code: 0xF13D
+    uid: ef23527c8edceec93c8181eef81aec8c
+    search: []
+
+  - css: "ios-call"
+    code: 0xF13E
+    uid: 391927ae5ef0ff071f4e5602d22cea46
+    search: []
+
+  - css: "ios-camera-outline"
+    code: 0xF3F5
+    uid: 769b3ab7dd4f912aaf8d354098546743
+    search: []
+
+  - css: "ios-camera"
+    code: 0xF3F6
+    uid: b8a73b30db846a2967094ed6fc5c54b3
+    search: []
+
+  - css: "ios-car-outline"
+    code: 0xF13F
+    uid: ffbdf11425ee743ef2576ea511a4f9a3
+    search: []
+
+  - css: "ios-car"
+    code: 0xF140
+    uid: 6e8633e22e3690026716a1767092731d
+    search: []
+
+  - css: "ios-card-outline"
+    code: 0xF141
+    uid: 6d25b39704ec7c3f51e0250300348f74
+    search: []
+
+  - css: "ios-card"
+    code: 0xF142
+    uid: b1580c6d6c97af2ee8640b28e272eb4a
+    search: []
+
+  - css: "ios-cart-outline"
+    code: 0xF3F7
+    uid: a0370c6ffaf14cac303775b23dbda831
+    search: []
+
+  - css: "ios-cart"
+    code: 0xF3F8
+    uid: 84453f259f35e0ca13d881075d7e0689
+    search: []
+
+  - css: "ios-cash-outline"
+    code: 0xF143
+    uid: a42675d9b32209c495e37ca2dcb71795
+    search: []
+
+  - css: "ios-cash"
+    code: 0xF144
+    uid: c46028d964efee0ce5898983188112b7
+    search: []
+
+  - css: "ios-chatboxes-outline"
+    code: 0xF3F9
+    uid: 5ed272667f7446eb6178f2429f2c8cfc
+    search: []
+
+  - css: "ios-chatboxes"
+    code: 0xF3FA
+    uid: c6c31c504c0644da14c62314a50ed35b
+    search: []
+
+  - css: "ios-chatbubbles-outline"
+    code: 0xF145
+    uid: 0c2c0280a21fc5af21673ee4a6f5cd85
+    search: []
+
+  - css: "ios-chatbubbles"
+    code: 0xF146
+    uid: a964af210d07c314376423e8b6894e5a
+    search: []
+
+  - css: "ios-checkbox-outline"
+    code: 0xF147
+    uid: 37962c759025b5ba38afb88a16e47dc8
+    search: []
+
+  - css: "ios-checkbox"
+    code: 0xF148
+    uid: 4bb92d4895de905ba648af17fd81fa76
+    search: []
+
+  - css: "ios-checkmark-circle-outline"
+    code: 0xF149
+    uid: 9ece7201bfaae1e3695394129d9c0495
+    search: []
+
+  - css: "ios-checkmark-circle"
+    code: 0xF14A
+    uid: e8112d77d394ba0dbbf7c22915066e0d
+    search: []
+
+  - css: "ios-checkmark"
+    code: 0xF3FF
+    uid: bab50558ad8bcb85719f6f4fc235a9b3
+    search: []
+
+  - css: "ios-clipboard-outline"
+    code: 0xF14B
+    uid: 7343376f4bf89338ba135853be3fd001
+    search: []
+
+  - css: "ios-clipboard"
+    code: 0xF14C
+    uid: ebef72d41f25db099a5dcfc15555918b
+    search: []
+
+  - css: "ios-clock-outline"
+    code: 0xF402
+    uid: 6f8b5f12ca4615141419f16c77006cca
+    search: []
+
+  - css: "ios-clock"
+    code: 0xF403
+    uid: 80e1fcd97a811c14c79bc640b7239726
+    search: []
+
+  - css: "ios-close-circle-outline"
+    code: 0xF14D
+    uid: f5e078f1ed4b3cf13a6c34898993a80c
+    search: []
+
+  - css: "ios-close-circle"
+    code: 0xF14E
+    uid: 3ec49652f6c6f70b64b64f42e6ecd44c
+    search: []
+
+  - css: "ios-close"
+    code: 0xF406
+    uid: 21160494cfbb314e78a682ecd7198a86
+    search: []
+
+  - css: "ios-closed-captioning-outline"
+    code: 0xF14F
+    uid: a74e4c976b09635e8300a2701a1e62b1
+    search: []
+
+  - css: "ios-closed-captioning"
+    code: 0xF150
+    uid: 5ff20750531a997d6aadf7907cac25ea
+    search: []
+
+  - css: "ios-cloud-circle-outline"
+    code: 0xF151
+    uid: 6ccb14ce0d716639c8d2428b9215aeb8
+    search: []
+
+  - css: "ios-cloud-circle"
+    code: 0xF152
+    uid: 22c109c97b8db1f9b6b1d192f19ef185
+    search: []
+
+  - css: "ios-cloud-done-outline"
+    code: 0xF153
+    uid: ccb8fa27ecb39f16af5c22ec7a5c99a5
+    search: []
+
+  - css: "ios-cloud-done"
+    code: 0xF154
+    uid: 7d90a4e128d3708784ccdd553f797250
+    search: []
+
+  - css: "ios-cloud-download-outline"
+    code: 0xF407
+    uid: 1294726c81a9085b5d46e0c379e0b5e8
+    search: []
+
+  - css: "ios-cloud-download"
+    code: 0xF408
+    uid: 8d19951dbf717579268e1811c4831a7a
+    search: []
+
+  - css: "ios-cloud-outline"
+    code: 0xF409
+    uid: 628777ef59bf201e16b076f15f0c56da
+    search: []
+
+  - css: "ios-cloud-upload-outline"
+    code: 0xF40A
+    uid: 5cba1ade2467949ae0ee211687dc8758
+    search: []
+
+  - css: "ios-cloud-upload"
+    code: 0xF40B
+    uid: acd4aa35feeb629f437ed60bf773bab8
+    search: []
+
+  - css: "ios-cloud"
+    code: 0xF40C
+    uid: 1625492789f57a5fb75b76f4fcb1bf5c
+    search: []
+
+  - css: "ios-cloudy-night-outline"
+    code: 0xF40D
+    uid: b1fef81db4072d141cc962ac08e9b882
+    search: []
+
+  - css: "ios-cloudy-night"
+    code: 0xF40E
+    uid: 3d392f46ee860c1f8206afdd2f2b49e6
+    search: []
+
+  - css: "ios-cloudy-outline"
+    code: 0xF40F
+    uid: cfe251d605b583a47284e53efb4b052d
+    search: []
+
+  - css: "ios-cloudy"
+    code: 0xF410
+    uid: 7687cc10888374fed1406dfd228705ec
+    search: []
+
+  - css: "ios-code-download"
+    code: 0xF155
+    uid: 21fe8ad955e7548e7d423ad351cae9ec
+    search: []
+
+  - css: "ios-code-working"
+    code: 0xF156
+    uid: de4643b923112730d1e2dd358103c1f4
+    search: []
+
+  - css: "ios-code"
+    code: 0xF157
+    uid: df2c1b13a0fed777319d8e828da68154
+    search: []
+
+  - css: "ios-cog-outline"
+    code: 0xF411
+    uid: 9f531055a9124e4325977ef50e52475e
+    search: []
+
+  - css: "ios-cog"
+    code: 0xF412
+    uid: e16b7c8d2fe3859282b72a58e7fa4579
+    search: []
+
+  - css: "ios-color-fill-outline"
+    code: 0xF158
+    uid: 9081adabdca5ce8970fde61df1e37c6b
+    search: []
+
+  - css: "ios-color-fill"
+    code: 0xF159
+    uid: ec312f321f1942425594a20bc41d65c6
+    search: []
+
+  - css: "ios-color-filter-outline"
+    code: 0xF413
+    uid: a37851d748207a84817e7a687d10792d
+    search: []
+
+  - css: "ios-color-filter"
+    code: 0xF414
+    uid: 8456f70f7dcf032674d6e2f7183daf4d
+    search: []
+
+  - css: "ios-color-palette-outline"
+    code: 0xF15A
+    uid: b4a6c17543600a117db88dc1bff02063
+    search: []
+
+  - css: "ios-color-palette"
+    code: 0xF15B
+    uid: e18680a4bb822b71eaf6fcfe65294c0d
+    search: []
+
+  - css: "ios-color-wand-outline"
+    code: 0xF415
+    uid: c10be6f1efba8dbda679b3028bc59100
+    search: []
+
+  - css: "ios-color-wand"
+    code: 0xF416
+    uid: 3fecf0a1fdc18eaa9a554b82ec33f09f
+    search: []
+
+  - css: "ios-compass-outline"
+    code: 0xF15C
+    uid: 8285cf7fa2d3a7e9c624f3bd128eb5db
+    search: []
+
+  - css: "ios-compass"
+    code: 0xF15D
+    uid: 128ef684b0aeef1682b031f290ff23be
+    search: []
+
+  - css: "ios-construct-outline"
+    code: 0xF15E
+    uid: 83086f73fefb3a846369395ea6c411e4
+    search: []
+
+  - css: "ios-construct"
+    code: 0xF15F
+    uid: a1fd87a27e93f44cc899cf78ee5e8306
+    search: []
+
+  - css: "ios-contact-outline"
+    code: 0xF419
+    uid: 7a5b64f881dbb6f69df654b38462a441
+    search: []
+
+  - css: "ios-contact"
+    code: 0xF41A
+    uid: b1bbcfc208e465ef673107ca62e2b157
+    search: []
+
+  - css: "ios-contacts-outline"
+    code: 0xF160
+    uid: 6da933bf672c1efd0cf6de14ae234993
+    search: []
+
+  - css: "ios-contacts"
+    code: 0xF161
+    uid: eb21f3495f66bd97358efc84a11870da
+    search: []
+
+  - css: "ios-contract"
+    code: 0xF162
+    uid: 720dadeca7e769b3d1143928f45701bb
+    search: []
+
+  - css: "ios-contrast"
+    code: 0xF163
+    uid: 24eb974569e82ad3f013b8cfdc35ee12
+    search: []
+
+  - css: "ios-copy-outline"
+    code: 0xF41B
+    uid: 37fca3bb7522e976f0ecee65df97408a
+    search: []
+
+  - css: "ios-copy"
+    code: 0xF41C
+    uid: 13902ae435bac5a545fef0a7e32a2539
+    search: []
+
+  - css: "ios-create-outline"
+    code: 0xF164
+    uid: 63cda7b06b986724fc77c70c812fd8a3
+    search: []
+
+  - css: "ios-create"
+    code: 0xF165
+    uid: 021e5641b372f7f05c869c89f6ca846e
+    search: []
+
+  - css: "ios-crop-outline"
+    code: 0xF166
+    uid: e29d57128e736421c209488aa31e04f1
+    search: []
+
+  - css: "ios-crop"
+    code: 0xF41E
+    uid: f242f3dc51afabafdc8a724a93b80b88
+    search: []
+
+  - css: "ios-cube-outline"
+    code: 0xF167
+    uid: 4d0eb2e064395a585b594d2d1db655f2
+    search: []
+
+  - css: "ios-cube"
+    code: 0xF168
+    uid: 7ca1f6821fdc502fabfb6db63cfa1392
+    search: []
+
+  - css: "ios-cut-outline"
+    code: 0xF169
+    uid: d79269373ed3a52dc85bcb54c364930c
+    search: []
+
+  - css: "ios-cut"
+    code: 0xF16A
+    uid: 28f677496cbfc991597280a99001e0c7
+    search: []
+
+  - css: "ios-desktop-outline"
+    code: 0xF16B
+    uid: 90c5623f95f915c9154d298babc7e174
+    search: []
+
+  - css: "ios-desktop"
+    code: 0xF16C
+    uid: dcae227b6a8a9fe195edb066488f207d
+    search: []
+
+  - css: "ios-disc-outline"
+    code: 0xF16D
+    uid: 3e4de81201d340443d0c371019b0a084
+    search: []
+
+  - css: "ios-disc"
+    code: 0xF16E
+    uid: 6a109330883c6a1bd93cd7a64411653d
+    search: []
+
+  - css: "ios-document-outline"
+    code: 0xF16F
+    uid: 241becdeec64ec0eec3df57bdf127831
+    search: []
+
+  - css: "ios-document"
+    code: 0xF170
+    uid: 57b2c259bde1eb4a3f9d765bbc3d4e5a
+    search: []
+
+  - css: "ios-done-all"
+    code: 0xF171
+    uid: cc595be234e262d0a28fb1bfef532b68
+    search: []
+
+  - css: "ios-download-outline"
+    code: 0xF41F
+    uid: 9e102e800b539c38d8e9c0720aee373c
+    search: []
+
+  - css: "ios-download"
+    code: 0xF420
+    uid: a0d52fc330925b29a559144f4cb22f1f
+    search: []
+
+  - css: "ios-easel-outline"
+    code: 0xF172
+    uid: 393baf249cab3478fd095a3b6a16193b
+    search: []
+
+  - css: "ios-easel"
+    code: 0xF173
+    uid: abf7cde5a491b792a66d55843fa50992
+    search: []
+
+  - css: "ios-egg-outline"
+    code: 0xF174
+    uid: 38c1aea1317a4d5e0af3655a3c843718
+    search: []
+
+  - css: "ios-egg"
+    code: 0xF175
+    uid: 4b29abbd68990eb46356637ffb5b614a
+    search: []
+
+  - css: "ios-exit-outline"
+    code: 0xF176
+    uid: 1746db6fe1a2783dd407df7559769155
+    search: []
+
+  - css: "ios-exit"
+    code: 0xF177
+    uid: 49f12cc91f7a5ddc4c174da3e39deb0a
+    search: []
+
+  - css: "ios-expand"
+    code: 0xF178
+    uid: 05f1bf1a9f9296105303a717c6887032
+    search: []
+
+  - css: "ios-eye-off-outline"
+    code: 0xF179
+    uid: 164e2dd8511fd833ca4cd318c1c72700
+    search: []
+
+  - css: "ios-eye-off"
+    code: 0xF17A
+    uid: d9488ae6e091f26cd6aa4f9817ad1914
+    search: []
+
+  - css: "ios-eye-outline"
+    code: 0xF424
+    uid: 33406467e4ced6b1fd521eb2a32a59eb
+    search: []
+
+  - css: "ios-eye"
+    code: 0xF425
+    uid: 4a21d4f0d580f655faf4cffec67e903d
+    search: []
+
+  - css: "ios-fastforward-outline"
+    code: 0xF426
+    uid: 41bf359a71ebe568eed39e226fb876ed
+    search: []
+
+  - css: "ios-fastforward"
+    code: 0xF427
+    uid: 36288256dd3a6273aacae6f5a060e1d1
+    search: []
+
+  - css: "ios-female"
+    code: 0xF17B
+    uid: 2f0cc987fb09b2571b719c772a75e54b
+    search: []
+
+  - css: "ios-filing-outline"
+    code: 0xF428
+    uid: 14147bf34329a567ecf8924807544efc
+    search: []
+
+  - css: "ios-filing"
+    code: 0xF429
+    uid: e2c70b2e38f9e34090d39aab7a1152e6
+    search: []
+
+  - css: "ios-film-outline"
+    code: 0xF42A
+    uid: 513debc2a4634746755fc2441aacbbeb
+    search: []
+
+  - css: "ios-film"
+    code: 0xF42B
+    uid: 60628a29484790ee69d0f081c8470897
+    search: []
+
+  - css: "ios-finger-print"
+    code: 0xF17C
+    uid: a8363274f77fa370e98f12e4f528452f
+    search: []
+
+  - css: "ios-flag-outline"
+    code: 0xF42C
+    uid: 95fc569ba7a941e213eb6d92963f7d75
+    search: []
+
+  - css: "ios-flag"
+    code: 0xF42D
+    uid: 8d3fd7340a06bca25eaff986da404284
+    search: []
+
+  - css: "ios-flame-outline"
+    code: 0xF42E
+    uid: 3e25a828fb598aefdd34964e917799c7
+    search: []
+
+  - css: "ios-flame"
+    code: 0xF42F
+    uid: 67b35af00c4ea749dac4aebcb3167f98
+    search: []
+
+  - css: "ios-flash-outline"
+    code: 0xF17D
+    uid: db362c0272255c14556213b183d31541
+    search: []
+
+  - css: "ios-flash"
+    code: 0xF17E
+    uid: b92af8a8a8174d62d51e98a6f3bf5dd4
+    search: []
+
+  - css: "ios-flask-outline"
+    code: 0xF430
+    uid: 38092bb64d7ea229ed6a3ac62b1a96e4
+    search: []
+
+  - css: "ios-flask"
+    code: 0xF431
+    uid: faa42f031181bf9a575d190c8babc128
+    search: []
+
+  - css: "ios-flower-outline"
+    code: 0xF432
+    uid: e3d638a72007bc5e11d0bc68d02f98a4
+    search: []
+
+  - css: "ios-flower"
+    code: 0xF433
+    uid: e41c0bdbe43cf2acd0be502dde587fd8
+    search: []
+
+  - css: "ios-folder-open-outline"
+    code: 0xF17F
+    uid: 323e182e0b90313aed4c09d4d9544dd5
+    search: []
+
+  - css: "ios-folder-open"
+    code: 0xF180
+    uid: 983604d16c8969ca69b2d52f29c9fab4
+    search: []
+
+  - css: "ios-folder-outline"
+    code: 0xF434
+    uid: b8aa72fab738d3196474b5934ab8998a
+    search: []
+
+  - css: "ios-folder"
+    code: 0xF435
+    uid: 6ef160e8ebd0874d52fa740f43755faf
+    search: []
+
+  - css: "ios-football-outline"
+    code: 0xF436
+    uid: dca76d0792e6032d7f7bba34216540b3
+    search: []
+
+  - css: "ios-football"
+    code: 0xF437
+    uid: 96709a2fd70fb85558eace7ea17f183e
+    search: []
+
+  - css: "ios-funnel-outline"
+    code: 0xF181
+    uid: 2816bf51db0b07199c3ff638ecfd6f23
+    search: []
+
+  - css: "ios-funnel"
+    code: 0xF182
+    uid: b9188896591ef4b84f8833d17d5b3c33
+    search: []
+
+  - css: "ios-game-controller-a-outline"
+    code: 0xF438
+    uid: 6a871de51544ec8ad3710756207b877f
+    search: []
+
+  - css: "ios-game-controller-a"
+    code: 0xF439
+    uid: 0c6147b54773296cb46735b59e9f9155
+    search: []
+
+  - css: "ios-game-controller-b-outline"
+    code: 0xF43A
+    uid: d2945f6c4634e5a7b826fd2ca7c8d868
+    search: []
+
+  - css: "ios-game-controller-b"
+    code: 0xF43B
+    uid: f1e37cb0af0c32973c0ea33b3969f1ac
+    search: []
+
+  - css: "ios-git-branch"
+    code: 0xF183
+    uid: d29d9b1bb6492952825f5abde4e88550
+    search: []
+
+  - css: "ios-git-commit"
+    code: 0xF184
+    uid: 2c1cb5fa2c3c39cf8c356e9418766251
+    search: []
+
+  - css: "ios-git-compare"
+    code: 0xF185
+    uid: d87dd77e86db21aa59272b6a63c1df52
+    search: []
+
+  - css: "ios-git-merge"
+    code: 0xF186
+    uid: 949ee9f4a51d151ada7bee9c13e95965
+    search: []
+
+  - css: "ios-git-network"
+    code: 0xF187
+    uid: ba7809f463c9a2f0796338833cfd397b
+    search: []
+
+  - css: "ios-git-pull-request"
+    code: 0xF188
+    uid: 1316e408e2875e8baf350ab86264989b
+    search: []
+
+  - css: "ios-glasses-outline"
+    code: 0xF43E
+    uid: 9420d23b84389fc32eabd914ed4d6aa9
+    search: []
+
+  - css: "ios-glasses"
+    code: 0xF43F
+    uid: 0a79ece6f1c7c0c101edcf30d4c0482c
+    search: []
+
+  - css: "ios-globe-outline"
+    code: 0xF189
+    uid: 2fbd39d980969f06a885a64988e1bfed
+    search: []
+
+  - css: "ios-globe"
+    code: 0xF18A
+    uid: 1b34fec9b56da6d453aca75f111a6170
+    search: []
+
+  - css: "ios-grid-outline"
+    code: 0xF18B
+    uid: 69fd7ed2cd27909772875361811230ea
+    search: []
+
+  - css: "ios-grid"
+    code: 0xF18C
+    uid: 6bae4e6b7851414546695cc76ab98adb
+    search: []
+
+  - css: "ios-hammer-outline"
+    code: 0xF18D
+    uid: 02f5bd23d04b3618e87a49cf201cc4f5
+    search: []
+
+  - css: "ios-hammer"
+    code: 0xF18E
+    uid: b785d926940502b0a41738a8f5ddbc5a
+    search: []
+
+  - css: "ios-hand-outline"
+    code: 0xF18F
+    uid: a6319e1439641f66e1c84828adfe0c83
+    search: []
+
+  - css: "ios-hand"
+    code: 0xF190
+    uid: 9b1c9b14491a9f0cccf701adcd637be4
+    search: []
+
+  - css: "ios-happy-outline"
+    code: 0xF191
+    uid: 63eee2b1b0d3a80c1fcf1c32b23d615a
+    search: []
+
+  - css: "ios-happy"
+    code: 0xF192
+    uid: a6fcf051b475502dec78a99e6feed8b3
+    search: []
+
+  - css: "ios-headset-outline"
+    code: 0xF193
+    uid: ec2875755d068bcbea66bed30f78a9da
+    search: []
+
+  - css: "ios-headset"
+    code: 0xF194
+    uid: bfc4ee83deb7b4e59e0675b6b27e8c3c
+    search: []
+
+  - css: "ios-heart-outline"
+    code: 0xF442
+    uid: ff4257fd4d365e20341467bda5096930
+    search: []
+
+  - css: "ios-heart"
+    code: 0xF443
+    uid: 9fc9ab223d7678d34487bebf11a6a3f1
+    search: []
+
+  - css: "ios-help-buoy-outline"
+    code: 0xF195
+    uid: 719459ba401734ee4ed77bc82455d54d
+    search: []
+
+  - css: "ios-help-buoy"
+    code: 0xF196
+    uid: b8edb2bcb3b033ec398cc5890be3d3c2
+    search: []
+
+  - css: "ios-help-circle-outline"
+    code: 0xF197
+    uid: 078b6d30a07ef605a1cf18ee641da94b
+    search: []
+
+  - css: "ios-help-circle"
+    code: 0xF198
+    uid: e728fbe72bf44f07da821b6b0a9316c5
+    search: []
+
+  - css: "ios-help"
+    code: 0xF446
+    uid: 8a88ca44ef64ff15819c90ff1d30930a
+    search: []
+
+  - css: "ios-home-outline"
+    code: 0xF447
+    uid: 735928a402266ac25b3b1a63b310bed5
+    search: []
+
+  - css: "ios-home"
+    code: 0xF448
+    uid: 0bebc969b0c84e7ad1f87f23c2903495
+    search: []
+
+  - css: "ios-ice-cream-outline"
+    code: 0xF199
+    uid: 98c2ee942b0949c03c64f28395409a5c
+    search: []
+
+  - css: "ios-ice-cream"
+    code: 0xF19A
+    uid: bfdb54ca5fc214a832279e4d902d7ff2
+    search: []
+
+  - css: "ios-image-outline"
+    code: 0xF19B
+    uid: b08f3d075c2ccd8125688a72a754e2db
+    search: []
+
+  - css: "ios-image"
+    code: 0xF19C
+    uid: 0d2906501a4c3ae42e0de712e4e38f11
+    search: []
+
+  - css: "ios-images-outline"
+    code: 0xF19D
+    uid: 44d965e44c98613496ade2ac9a634d6e
+    search: []
+
+  - css: "ios-images"
+    code: 0xF19E
+    uid: 6a427ee0638863b78bb5a966729285f3
+    search: []
+
+  - css: "ios-infinite-outline"
+    code: 0xF449
+    uid: 9e89279a8ed53af024919593b8a55443
+    search: []
+
+  - css: "ios-infinite"
+    code: 0xF44A
+    uid: eb37d8b247defb8717dbf556c3e528ad
+    search: []
+
+  - css: "ios-information-circle-outline"
+    code: 0xF19F
+    uid: c1602a55d710f5a7cd8df146e566f638
+    search: []
+
+  - css: "ios-information-circle"
+    code: 0xF1A0
+    uid: 25da3859893e385c1bd0eab31c8c15d1
+    search: []
+
+  - css: "ios-information"
+    code: 0xF44D
+    uid: ba1a472c3ef3bdf8659220030282be14
+    search: []
+
+  - css: "ios-ionic-outline"
+    code: 0xF44E
+    uid: 2f51384ba1027c9ff278b44d8076ea91
+    search: []
+
+  - css: "ios-ionic"
+    code: 0xF1A1
+    uid: 15e982d16158b38a9e8c762faeb2cb68
+    search: []
+
+  - css: "ios-ionitron-outline"
+    code: 0xF1A2
+    uid: 5047a4b9f5976b7ba7e4f8bb939b6b08
+    search: []
+
+  - css: "ios-ionitron"
+    code: 0xF1A3
+    uid: 6103592aafda86d775abf2fa6d6736a2
+    search: []
+
+  - css: "ios-jet-outline"
+    code: 0xF1A4
+    uid: 55c0a157e6cdf66cb7cd88535eb87af8
+    search: []
+
+  - css: "ios-jet"
+    code: 0xF1A5
+    uid: b494d7b67ee0ca73af4812946f52ebce
+    search: []
+
+  - css: "ios-key-outline"
+    code: 0xF1A6
+    uid: 69471cc48c0e77ae5ea9e9a510eefc65
+    search: []
+
+  - css: "ios-key"
+    code: 0xF1A7
+    uid: 26a12aa1db7358665a8ca7c068edb68a
+    search: []
+
+  - css: "ios-keypad-outline"
+    code: 0xF44F
+    uid: 6857e13507bd3d0a7f211d381890460b
+    search: []
+
+  - css: "ios-keypad"
+    code: 0xF450
+    uid: e014ca11a85064c379fb248f9b5e6210
+    search: []
+
+  - css: "ios-laptop"
+    code: 0xF1A8
+    uid: 6cf8f1a7e4728113ea927eee113c3f9e
+    search: []
+
+  - css: "ios-leaf-outline"
+    code: 0xF1A9
+    uid: 9857e19744ba376e08888f3c363a7b74
+    search: []
+
+  - css: "ios-leaf"
+    code: 0xF1AA
+    uid: 3a740de2d9cdd4d457ef09525317c930
+    search: []
+
+  - css: "ios-link-outline"
+    code: 0xF1CA
+    uid: 520d556f486153ff72f9091f7f61ed3e
+    search: []
+
+  - css: "ios-link"
+    code: 0xF22A
+    uid: 6738076284c319b783ace7e949fc48f5
+    search: []
+
+  - css: "ios-list-box-outline"
+    code: 0xF1AB
+    uid: c40d637e4ef3ca17e70536192d66b470
+    search: []
+
+  - css: "ios-list-box"
+    code: 0xF1AC
+    uid: 13aba25a1a5574b5b1de1394ae9ac9a8
+    search: []
+
+  - css: "ios-list"
+    code: 0xF454
+    uid: 88b2022a681ac2f2a6593c9339310bb9
+    search: []
+
+  - css: "ios-locate-outline"
+    code: 0xF1AD
+    uid: 932d762edd364724366517f53513f2de
+    search: []
+
+  - css: "ios-locate"
+    code: 0xF1AE
+    uid: 57b08797eb671b42ce328ac6ff43a62a
+    search: []
+
+  - css: "ios-lock-outline"
+    code: 0xF1AF
+    uid: 312d6965f8ed974e9fba58bf9de10c0a
+    search: []
+
+  - css: "ios-lock"
+    code: 0xF1B0
+    uid: 5874c76b434c40178c9cf7077590af95
+    search: []
+
+  - css: "ios-log-in"
+    code: 0xF1B1
+    uid: 00fbda830305616ff7f75d9a48b91398
+    search: []
+
+  - css: "ios-log-out"
+    code: 0xF1B2
+    uid: 8042fc7b628bbe4da70164c4a7c901c4
+    search: []
+
+  - css: "ios-magnet-outline"
+    code: 0xF1B3
+    uid: adda429ca1bcf3d2c081166a65320262
+    search: []
+
+  - css: "ios-magnet"
+    code: 0xF1B4
+    uid: 69b5daedb0465b5834e2d8414639c22b
+    search: []
+
+  - css: "ios-mail-open-outline"
+    code: 0xF1B5
+    uid: 5d1ee1bfaec8ab3a6373964d891068ed
+    search: []
+
+  - css: "ios-mail-open"
+    code: 0xF1B6
+    uid: 3c012ccbffdc9ce0cb434e54d0aed0a2
+    search: []
+
+  - css: "ios-mail-outline"
+    code: 0xF1B7
+    uid: 4e1270b560a46ff3c423250d729d0b4b
+    search: []
+
+  - css: "ios-mail"
+    code: 0xF1B8
+    uid: 25b387a3b1c2afff3a7f3db67c8cbc30
+    search: []
+
+  - css: "ios-male"
+    code: 0xF1B9
+    uid: 2c1045537c7d72524ba3a368b5927097
+    search: []
+
+  - css: "ios-man-outline"
+    code: 0xF1BA
+    uid: cedc193cabc02b587e9916001c0c6b96
+    search: []
+
+  - css: "ios-man"
+    code: 0xF1BB
+    uid: 8368ac163a66d44cd68dbb0f312d169e
+    search: []
+
+  - css: "ios-map-outline"
+    code: 0xF1BC
+    uid: 9c85857c31735735aff911ada0326e5c
+    search: []
+
+  - css: "ios-map"
+    code: 0xF1BD
+    uid: 0a0a7f2af337d051cea3a6c5918acf85
+    search: []
+
+  - css: "ios-medal-outline"
+    code: 0xF1BE
+    uid: f883a3f0202d76d9133506c8829d6e93
+    search: []
+
+  - css: "ios-medal"
+    code: 0xF1BF
+    uid: ed5c2b1e7a940fda4a74dd7ee5d85f09
+    search: []
+
+  - css: "ios-medical-outline"
+    code: 0xF45B
+    uid: 354c837a1c96e875c2e3427051ad9658
+    search: []
+
+  - css: "ios-medical"
+    code: 0xF45C
+    uid: 2f69af078c568094b05c90fa7e233d62
+    search: []
+
+  - css: "ios-medkit-outline"
+    code: 0xF45D
+    uid: 31ae4041659a394960cd08a9e8652c2e
+    search: []
+
+  - css: "ios-medkit"
+    code: 0xF45E
+    uid: 57a59049c19edac639f79e0adf7ab76d
+    search: []
+
+  - css: "ios-megaphone-outline"
+    code: 0xF1C0
+    uid: 5ed7145a757b35a2ad0234d12321b9ca
+    search: []
+
+  - css: "ios-megaphone"
+    code: 0xF1C1
+    uid: c80fd0af35d95b27736e3adfe2e8fc40
+    search: []
+
+  - css: "ios-menu-outline"
+    code: 0xF1C2
+    uid: 50c4e1ff31487d6e1280364c3fd87913
+    search: []
+
+  - css: "ios-menu"
+    code: 0xF1C3
+    uid: 1331092d770242a506d98937cfa5ea60
+    search: []
+
+  - css: "ios-mic-off-outline"
+    code: 0xF1C4
+    uid: d01f99ffe1b97ff1da141f3b339ba0cb
+    search: []
+
+  - css: "ios-mic-off"
+    code: 0xF45F
+    uid: 1134d4ac4e4cc262ceeec232532ff2eb
+    search: []
+
+  - css: "ios-mic-outline"
+    code: 0xF460
+    uid: b120ebe2dc412ed4d8cbc2a15fdf56aa
+    search: []
+
+  - css: "ios-mic"
+    code: 0xF461
+    uid: cb24356f19dc26fcb92316d20d4572d4
+    search: []
+
+  - css: "ios-microphone-outline"
+    code: 0xF1C5
+    uid: 01a759ad27c83a2ea613e26badaaa9e0
+    search: []
+
+  - css: "ios-microphone"
+    code: 0xF1C6
+    uid: 9cd16238858420eab8f45f9dfb41ea04
+    search: []
+
+  - css: "ios-moon-outline"
+    code: 0xF467
+    uid: 713675c157031217aaa12080157049aa
+    search: []
+
+  - css: "ios-moon"
+    code: 0xF468
+    uid: a6f1ed1a43d4c4602cc7d20ba4891dee
+    search: []
+
+  - css: "ios-more-outline"
+    code: 0xF1C7
+    uid: 17bd39fb65c2ee4ec3ef1be9aaccb59c
+    search: []
+
+  - css: "ios-more"
+    code: 0xF1C8
+    uid: f3e12fcf03d4e567db6a6cc7a024aade
+    search: []
+
+  - css: "ios-move"
+    code: 0xF1CB
+    uid: eced806134314d03ec12b29d6db4ccdd
+    search: []
+
+  - css: "ios-musical-note-outline"
+    code: 0xF1CC
+    uid: 830280e36495011f7163625479f32e24
+    search: []
+
+  - css: "ios-musical-note"
+    code: 0xF46B
+    uid: 5f4489ac12d8c6c5b828c91e51940cfd
+    search: []
+
+  - css: "ios-musical-notes-outline"
+    code: 0xF1CD
+    uid: f1102634ef73b6ea430a703de25f3933
+    search: []
+
+  - css: "ios-musical-notes"
+    code: 0xF46C
+    uid: d0e32a046976fc488bb687ed96946ab5
+    search: []
+
+  - css: "ios-navigate-outline"
+    code: 0xF46D
+    uid: 0fe7314c2700df78d06e4673dd0be7e5
+    search: []
+
+  - css: "ios-navigate"
+    code: 0xF46E
+    uid: 89c3918be446fc71b817ff36c5fd11ce
+    search: []
+
+  - css: "ios-no-smoking-outline"
+    code: 0xF1CE
+    uid: 81c734de588dd92c590c03fbc166032b
+    search: []
+
+  - css: "ios-no-smoking"
+    code: 0xF1CF
+    uid: de0c51b603f51ee5f3d3792885162107
+    search: []
+
+  - css: "ios-notifications-off-outline"
+    code: 0xF1D0
+    uid: d90ecaa798bcedf27e1c75145b1dfe38
+    search: []
+
+  - css: "ios-notifications-off"
+    code: 0xF1D1
+    uid: 10db269feda2864a7209deca52a6ae4e
+    search: []
+
+  - css: "ios-notifications-outline"
+    code: 0xF1D2
+    uid: af4e3df4e70ea1ae912dbb4e15cc0eb6
+    search: []
+
+  - css: "ios-notifications"
+    code: 0xF1D3
+    uid: 46fefb813633772692996a0e1527b999
+    search: []
+
+  - css: "ios-nuclear-outline"
+    code: 0xF1D4
+    uid: 39e72c973c207a52ecd114ae18df49dd
+    search: []
+
+  - css: "ios-nuclear"
+    code: 0xF1D5
+    uid: fcd63854f9227f8b517372837e02eef7
+    search: []
+
+  - css: "ios-nutrition-outline"
+    code: 0xF46F
+    uid: 941115d4c973cb67f003dcfcd5034dd4
+    search: []
+
+  - css: "ios-nutrition"
+    code: 0xF470
+    uid: d18388619020b97673114851a0231d0d
+    search: []
+
+  - css: "ios-open-outline"
+    code: 0xF1D6
+    uid: 189e7b68e8d0e9d6887cf61e63c7296b
+    search: []
+
+  - css: "ios-open"
+    code: 0xF1D7
+    uid: 021c07b79e329edbed85eebb0c0331f6
+    search: []
+
+  - css: "ios-options-outline"
+    code: 0xF1D8
+    uid: 8fd1a8f78e62aa2651111928b740cec1
+    search: []
+
+  - css: "ios-options"
+    code: 0xF1D9
+    uid: be6d4b694489f6d47190a1fa65f9f5e0
+    search: []
+
+  - css: "ios-outlet-outline"
+    code: 0xF1DA
+    uid: fb6a010cb91972ec82dbd23849f0458b
+    search: []
+
+  - css: "ios-outlet"
+    code: 0xF1DB
+    uid: 2337ef3ee2b57b68a2e3fa1191c38bc1
+    search: []
+
+  - css: "ios-paper-outline"
+    code: 0xF471
+    uid: 172c2417f914a816f16269e6657d5873
+    search: []
+
+  - css: "ios-paper-plane-outline"
+    code: 0xF1DC
+    uid: e71d87e51bea741271fba23bea4ec9fe
+    search: []
+
+  - css: "ios-paper-plane"
+    code: 0xF1DD
+    uid: 65cc15e1866cacff2a0179f2bc9d6d3a
+    search: []
+
+  - css: "ios-paper"
+    code: 0xF472
+    uid: 9ef675f2c047b69f74fc864973013680
+    search: []
+
+  - css: "ios-partly-sunny-outline"
+    code: 0xF1DE
+    uid: 234cbe8060a34d70f0c73dc0e5cb7cb1
+    search: []
+
+  - css: "ios-partly-sunny"
+    code: 0xF1DF
+    uid: 436fb6846622d9bce9dff3a329f7825d
+    search: []
+
+  - css: "ios-pause-outline"
+    code: 0xF477
+    uid: a1286a2bf7531c083cbbf718b7337bbf
+    search: []
+
+  - css: "ios-pause"
+    code: 0xF478
+    uid: b140c651cb6cae031aec29bf556cfc8a
+    search: []
+
+  - css: "ios-paw-outline"
+    code: 0xF479
+    uid: c49f5555edd49d08031bf03ca082d778
+    search: []
+
+  - css: "ios-paw"
+    code: 0xF47A
+    uid: b82d6679a889a20224c8724acbc8bacb
+    search: []
+
+  - css: "ios-people-outline"
+    code: 0xF47B
+    uid: 87e2559e72120e6df7185b61941be3dd
+    search: []
+
+  - css: "ios-people"
+    code: 0xF47C
+    uid: c9f4687a493f05cedbe8d8cea0d0160d
+    search: []
+
+  - css: "ios-person-add-outline"
+    code: 0xF1E0
+    uid: 931e62e2606545fb4b7863e16b81412f
+    search: []
+
+  - css: "ios-person-add"
+    code: 0xF1E1
+    uid: 631770d0a0e1c7a6a19f1d77261c8747
+    search: []
+
+  - css: "ios-person-outline"
+    code: 0xF47D
+    uid: 291ca5f9794a4ad07f532e2211b67962
+    search: []
+
+  - css: "ios-person"
+    code: 0xF47E
+    uid: 7a7fc925373d123ef5619f6ef57b5af3
+    search: []
+
+  - css: "ios-phone-landscape"
+    code: 0xF1E2
+    uid: 561160cf0d27500c088f7578c03d1f74
+    search: []
+
+  - css: "ios-phone-portrait"
+    code: 0xF1E3
+    uid: 46b127a4c84f0ac822e83cedd162ef3c
+    search: []
+
+  - css: "ios-photos-outline"
+    code: 0xF481
+    uid: 2fb98ab317f7fb09726fcfb2eb0354ae
+    search: []
+
+  - css: "ios-photos"
+    code: 0xF482
+    uid: 394325e1185b17a89451532a9e0b47d6
+    search: []
+
+  - css: "ios-pie-outline"
+    code: 0xF483
+    uid: da4262f4b7e46d5b7d120e01c61b28b2
+    search: []
+
+  - css: "ios-pie"
+    code: 0xF484
+    uid: 035e3af49db359befd65d7e068480718
+    search: []
+
+  - css: "ios-pin-outline"
+    code: 0xF1E4
+    uid: 0991a87746eee5c7129b2a226419f0b4
+    search: []
+
+  - css: "ios-pin"
+    code: 0xF1E5
+    uid: 4d990e96953c673c765b8e4b8576dbb7
+    search: []
+
+  - css: "ios-pint-outline"
+    code: 0xF485
+    uid: 83088a3e39b2dd48e99ef44a5056b191
+    search: []
+
+  - css: "ios-pint"
+    code: 0xF486
+    uid: df0174988eadfe9cced99e8af0123172
+    search: []
+
+  - css: "ios-pizza-outline"
+    code: 0xF1E6
+    uid: 31a345b6686cdb62aaabece2345b48d3
+    search: []
+
+  - css: "ios-pizza"
+    code: 0xF1E7
+    uid: e38e6620f694790e260b33f410d9f884
+    search: []
+
+  - css: "ios-plane-outline"
+    code: 0xF1E8
+    uid: 40b441b97082b0448a8dc5da37e9ac93
+    search: []
+
+  - css: "ios-plane"
+    code: 0xF1E9
+    uid: 97f18822a7d17383cf1449eef50a1ab9
+    search: []
+
+  - css: "ios-planet-outline"
+    code: 0xF1EA
+    uid: 2c41f352941cb88142477ff078d9319a
+    search: []
+
+  - css: "ios-planet"
+    code: 0xF1EB
+    uid: ca20aa6bcacfe85c84d96805e9f540e0
+    search: []
+
+  - css: "ios-play-outline"
+    code: 0xF487
+    uid: 5ee744a64a6a16045ce877bbc79edc5e
+    search: []
+
+  - css: "ios-play"
+    code: 0xF488
+    uid: a5b664fb3a5281d65f1b90116bcac966
+    search: []
+
+  - css: "ios-podium-outline"
+    code: 0xF1EC
+    uid: ea24ed110ab5939b12916a2e692d94d3
+    search: []
+
+  - css: "ios-podium"
+    code: 0xF1ED
+    uid: 98b8c65565173d2c8533c3924841b01e
+    search: []
+
+  - css: "ios-power-outline"
+    code: 0xF1EE
+    uid: ede5ad7eb1cda89de7ba9f459ec2de73
+    search: []
+
+  - css: "ios-power"
+    code: 0xF1EF
+    uid: 6acbdafb43ab5fe1bdb5abd66c5cd0f3
+    search: []
+
+  - css: "ios-pricetag-outline"
+    code: 0xF48C
+    uid: 939a2b55461b04798e4a2768b3ec33bc
+    search: []
+
+  - css: "ios-pricetag"
+    code: 0xF48D
+    uid: efc6e43167caa7cf4968d0b59fe0e0a7
+    search: []
+
+  - css: "ios-pricetags-outline"
+    code: 0xF48E
+    uid: ec458444fef7a9223c03a5133b3a24f3
+    search: []
+
+  - css: "ios-pricetags"
+    code: 0xF48F
+    uid: 61104cc277ca453002d2bcf6b3bbbf50
+    search: []
+
+  - css: "ios-print-outline"
+    code: 0xF1F0
+    uid: 385bb404baa57f44df9f9e6e450594b6
+    search: []
+
+  - css: "ios-print"
+    code: 0xF1F1
+    uid: 709fab427dbc4c19dfa255c6549bdaa0
+    search: []
+
+  - css: "ios-pulse-outline"
+    code: 0xF1F2
+    uid: 6b1d729b2c828a3214d60c86a8dffd8a
+    search: []
+
+  - css: "ios-pulse"
+    code: 0xF493
+    uid: fe72b6cefebc99cb0ff311ce84f18f2b
+    search: []
+
+  - css: "ios-qr-scanner"
+    code: 0xF1F3
+    uid: 1d86a4c9c0a80706dbe1b7e0421e17c9
+    search: []
+
+  - css: "ios-quote-outline"
+    code: 0xF1F4
+    uid: e6d0386b9353b7769af5c3f388892047
+    search: []
+
+  - css: "ios-quote"
+    code: 0xF1F5
+    uid: 8ee4b9d14c80dceef921549c7dd185df
+    search: []
+
+  - css: "ios-radio-button-off"
+    code: 0xF1F6
+    uid: e11ac56291f4222bb04fec119ba03d47
+    search: []
+
+  - css: "ios-radio-button-on"
+    code: 0xF1F7
+    uid: a9eddbec5c27ee65a3db0159ea3ea2dc
+    search: []
+
+  - css: "ios-radio-outline"
+    code: 0xF1F8
+    uid: 3461d96eb6983f6bdec8a289788c1fb3
+    search: []
+
+  - css: "ios-radio"
+    code: 0xF1F9
+    uid: 2bf39bad596dfed9b594e4ef033baa4a
+    search: []
+
+  - css: "ios-rainy-outline"
+    code: 0xF494
+    uid: a27b96f580dd1e15fc183a5ad21b9ff3
+    search: []
+
+  - css: "ios-rainy"
+    code: 0xF495
+    uid: fc821ffd10aad45b44345109753ee6df
+    search: []
+
+  - css: "ios-recording-outline"
+    code: 0xF496
+    uid: 74459e3cf6da7acc06505d8aea838e09
+    search: []
+
+  - css: "ios-recording"
+    code: 0xF497
+    uid: 35d255fc409837c82d107d4b71eec5df
+    search: []
+
+  - css: "ios-redo-outline"
+    code: 0xF498
+    uid: cd14f36853088d5b2f7b31ac3de202b2
+    search: []
+
+  - css: "ios-redo"
+    code: 0xF499
+    uid: c8cb60fc04c6e13fea53a9eaf1614e50
+    search: []
+
+  - css: "ios-refresh-circle-outline"
+    code: 0xF224
+    uid: 1bfcc3657ea3289400f8f0e3a9808485
+    search: []
+
+  - css: "ios-refresh-circle"
+    code: 0xF226
+    uid: 8edb2dafe19b19fa8ffc41cebfbb75f7
+    search: []
+
+  - css: "ios-refresh"
+    code: 0xF49C
+    uid: b1af398bacd1a27a408f5b5997aefd6a
+    search: []
+
+  - css: "ios-remove-circle-outline"
+    code: 0xF1FA
+    uid: 0f2aaefe4a20c284060392460c9d50f8
+    search: []
+
+  - css: "ios-remove-circle"
+    code: 0xF1FB
+    uid: aeb04d697e473b48387ec2d49430124a
+    search: []
+
+  - css: "ios-remove"
+    code: 0xF1FC
+    uid: 4edf7d88af38eec66656762d2a95523f
+    search: []
+
+  - css: "ios-reorder"
+    code: 0xF1FD
+    uid: 62270592458c4ad278df3a732b3e82b1
+    search: []
+
+  - css: "ios-repeat"
+    code: 0xF1FE
+    uid: d63a6a16838fbc01a6876fb7a9aef205
+    search: []
+
+  - css: "ios-resize"
+    code: 0xF1FF
+    uid: 160c6ff0c756e46fbbbac74e1139a221
+    search: []
+
+  - css: "ios-restaurant-outline"
+    code: 0xF200
+    uid: 7d70c5ed03d67dfd90e3e45f0606ea5c
+    search: []
+
+  - css: "ios-restaurant"
+    code: 0xF201
+    uid: d2f90535100bec6107c94bf915abc8ee
+    search: []
+
+  - css: "ios-return-left"
+    code: 0xF202
+    uid: 9c9a571be737b135908a244f94d3d87f
+    search: []
+
+  - css: "ios-return-right"
+    code: 0xF203
+    uid: 8d50d3b5b6b946685f1be08e9755f4e8
+    search: []
+
+  - css: "ios-reverse-camera-outline"
+    code: 0xF49E
+    uid: bbd92af9b41bc70274ed056f987a30c6
+    search: []
+
+  - css: "ios-reverse-camera"
+    code: 0xF49F
+    uid: 1a5e264c93b3a76b9612a97f715d9f5a
+    search: []
+
+  - css: "ios-rewind-outline"
+    code: 0xF4A0
+    uid: 77a29c89c5738c3f428fd8c295526a97
+    search: []
+
+  - css: "ios-rewind"
+    code: 0xF4A1
+    uid: e86734d2526ee6c29e8c4280b60d260b
+    search: []
+
+  - css: "ios-ribbon-outline"
+    code: 0xF204
+    uid: 35fee006026ae607d202bb46e3024f99
+    search: []
+
+  - css: "ios-ribbon"
+    code: 0xF205
+    uid: 165ed3b9d4481495855b36c1911930f0
+    search: []
+
+  - css: "ios-rose-outline"
+    code: 0xF4A2
+    uid: fbc769d6b564be17c5681da97c5723e2
+    search: []
+
+  - css: "ios-rose"
+    code: 0xF4A3
+    uid: c704512b944bc14ee98f6580565d4031
+    search: []
+
+  - css: "ios-sad-outline"
+    code: 0xF206
+    uid: a1a203c1e283df4194e6154d5220811c
+    search: []
+
+  - css: "ios-sad"
+    code: 0xF207
+    uid: 38c9085602038984c0c6272d1200b010
+    search: []
+
+  - css: "ios-school-outline"
+    code: 0xF208
+    uid: 3a637f7d55b7bbdcfce7d988fb5d601b
+    search: []
+
+  - css: "ios-school"
+    code: 0xF209
+    uid: 483c43c6ed11041b7cbe856ca8cf0c32
+    search: []
+
+  - css: "ios-search-outline"
+    code: 0xF20A
+    uid: 24accd6ebf31525bc1d4385d57218b5c
+    search: []
+
+  - css: "ios-search"
+    code: 0xF4A5
+    uid: 808b824955027645625ca92a820cec35
+    search: []
+
+  - css: "ios-send-outline"
+    code: 0xF20B
+    uid: f8387d9c1f8b3b8449cfa6982c32c83e
+    search: []
+
+  - css: "ios-send"
+    code: 0xF20C
+    uid: 075425ad613f23b16ae4c1cb98c73675
+    search: []
+
+  - css: "ios-settings-outline"
+    code: 0xF20D
+    uid: af6cccfc641e49f82e8de54b882e880a
+    search: []
+
+  - css: "ios-settings"
+    code: 0xF4A7
+    uid: aad9c729b82d8fdd0a0fcc6794fe3a81
+    search: []
+
+  - css: "ios-share-alt-outline"
+    code: 0xF20E
+    uid: d24e65320e73fb308c0dfae8a3f30435
+    search: []
+
+  - css: "ios-share-alt"
+    code: 0xF20F
+    uid: 38071892e640cbba18ed71716e774098
+    search: []
+
+  - css: "ios-share-outline"
+    code: 0xF210
+    uid: fb032386809e1b74bdb8eb9375b04da0
+    search: []
+
+  - css: "ios-share"
+    code: 0xF211
+    uid: 347f7c5821af9f09334f9dd6382012d2
+    search: []
+
+  - css: "ios-shirt-outline"
+    code: 0xF212
+    uid: 0e60a4a4803c682741cd4495474d2cdf
+    search: []
+
+  - css: "ios-shirt"
+    code: 0xF213
+    uid: d765eae3640535354b3b52ef1554cfe5
+    search: []
+
+  - css: "ios-shuffle"
+    code: 0xF4A9
+    uid: 79db409400858fd82644173e13a47694
+    search: []
+
+  - css: "ios-skip-backward-outline"
+    code: 0xF214
+    uid: 89598b6443c560435a0c1d6fabd930fb
+    search: []
+
+  - css: "ios-skip-backward"
+    code: 0xF215
+    uid: 8f3fb42cfef2cfd78d8f6d19768dbd85
+    search: []
+
+  - css: "ios-skip-forward-outline"
+    code: 0xF216
+    uid: b81d02ec51b8c7eb9f03a80fe7cf8e56
+    search: []
+
+  - css: "ios-skip-forward"
+    code: 0xF217
+    uid: 3abc49a5a05ae2898328a35e20e64041
+    search: []
+
+  - css: "ios-snow-outline"
+    code: 0xF22C
+    uid: 9aff702b5e87f260a150b1045bc54bab
+    search: []
+
+  - css: "ios-snow"
+    code: 0xF218
+    uid: 297af2911c47b7cf45c86fe4524c5c4e
+    search: []
+
+  - css: "ios-speedometer-outline"
+    code: 0xF4AF
+    uid: 49b39de3620cb2a7655758685a6c538a
+    search: []
+
+  - css: "ios-speedometer"
+    code: 0xF4B0
+    uid: ac622858cf8ff899273365d0b4e4c50c
+    search: []
+
+  - css: "ios-square-outline"
+    code: 0xF219
+    uid: 155cfc2d6c49785fbdc8aaba2a565cfe
+    search: []
+
+  - css: "ios-square"
+    code: 0xF21A
+    uid: c3a3b3d9c4792d55d20d236ed052aa33
+    search: []
+
+  - css: "ios-star-half"
+    code: 0xF4B1
+    uid: fd64b337ab4a0ec6c29fa9968bbd1fd2
+    search: []
+
+  - css: "ios-star-outline"
+    code: 0xF4B2
+    uid: 9d1731e8c23ca566c60c2adae43a2551
+    search: []
+
+  - css: "ios-star"
+    code: 0xF4B3
+    uid: 5ad19d2d104a659d4414dd03791e2b8d
+    search: []
+
+  - css: "ios-stats-outline"
+    code: 0xF21B
+    uid: 6bda310fa59a613e7abce33146d14445
+    search: []
+
+  - css: "ios-stats"
+    code: 0xF21C
+    uid: 22bb10f4dcadcab1a18a32dd3cb68d82
+    search: []
+
+  - css: "ios-stopwatch-outline"
+    code: 0xF4B4
+    uid: 56bd223eef03a33a91e8958a83ef9cf1
+    search: []
+
+  - css: "ios-stopwatch"
+    code: 0xF4B5
+    uid: 916beceb47fc558717f1084630c1f8e2
+    search: []
+
+  - css: "ios-subway-outline"
+    code: 0xF21D
+    uid: 1e0d7af5da631a208841b075a602f044
+    search: []
+
+  - css: "ios-subway"
+    code: 0xF21E
+    uid: 0c5819b85cbfe24048bdbf7335bd952c
+    search: []
+
+  - css: "ios-sunny-outline"
+    code: 0xF4B6
+    uid: 4263e303a35c9ac6bc408e0d063f8b28
+    search: []
+
+  - css: "ios-sunny"
+    code: 0xF4B7
+    uid: 0ff795230c7636e7a99fd2033ad89324
+    search: []
+
+  - css: "ios-swap"
+    code: 0xF21F
+    uid: 62f2890c04b75df6157e72d53db3231c
+    search: []
+
+  - css: "ios-switch-outline"
+    code: 0xF220
+    uid: f5af472e2c7bb14a4d182d8b92c7a7ee
+    search: []
+
+  - css: "ios-switch"
+    code: 0xF221
+    uid: a46b0d15269f6d7d2f6f6688ea8032ea
+    search: []
+
+  - css: "ios-sync"
+    code: 0xF222
+    uid: 36a79497dcb279005e4dec6fc05e0cb4
+    search: []
+
+  - css: "ios-tablet-landscape"
+    code: 0xF223
+    uid: 0f2caaa108c48bf79f5555840bdc930d
+    search: []
+
+  - css: "ios-tablet-portrait"
+    code: 0xF24E
+    uid: b981c3ae4c515db29c6289c661e4a9a2
+    search: []
+
+  - css: "ios-tennisball-outline"
+    code: 0xF4BA
+    uid: d3f12c1eb92e5b8c6aa9f973d498240b
+    search: []
+
+  - css: "ios-tennisball"
+    code: 0xF4BB
+    uid: aff7f650f6d00dd349b8c6412ed781a2
+    search: []
+
+  - css: "ios-text-outline"
+    code: 0xF24F
+    uid: 89aef437486f6584a41dd46707d1d3d9
+    search: []
+
+  - css: "ios-text"
+    code: 0xF250
+    uid: ce54020f8c1b27701fbc84d7fb343fef
+    search: []
+
+  - css: "ios-thermometer-outline"
+    code: 0xF251
+    uid: f31f566bcb15b1d0abcecc6fd462529e
+    search: []
+
+  - css: "ios-thermometer"
+    code: 0xF252
+    uid: 62c94f633e70532ff343931fc51c9c3e
+    search: []
+
+  - css: "ios-thumbs-down-outline"
+    code: 0xF253
+    uid: af0a6a11437634c14a9691045e957804
+    search: []
+
+  - css: "ios-thumbs-down"
+    code: 0xF254
+    uid: aa8c0302041e52959639e98056f75749
+    search: []
+
+  - css: "ios-thumbs-up-outline"
+    code: 0xF255
+    uid: 9bfaf57c1b04f84f452fbd6b7568b7b2
+    search: []
+
+  - css: "ios-thumbs-up"
+    code: 0xF256
+    uid: a9380398e036f74325e5f5d1063bf327
+    search: []
+
+  - css: "ios-thunderstorm-outline"
+    code: 0xF4BC
+    uid: 77496d315c91c6691f77b9645643d971
+    search: []
+
+  - css: "ios-thunderstorm"
+    code: 0xF4BD
+    uid: 263719fac02ef52571b2ea3ac88b1978
+    search: []
+
+  - css: "ios-time-outline"
+    code: 0xF4BE
+    uid: 4fc81f2e6f0038675febd136db1ac8a9
+    search: []
+
+  - css: "ios-time"
+    code: 0xF4BF
+    uid: 796a0d04bd3379ec8a4a21188e786a40
+    search: []
+
+  - css: "ios-timer-outline"
+    code: 0xF4C0
+    uid: e1a2eb6c9dbd56b8002c8c1a3d785ddf
+    search: []
+
+  - css: "ios-timer"
+    code: 0xF4C1
+    uid: af77c50861c18bb0ff5e19ff964d65b9
+    search: []
+
+  - css: "ios-train-outline"
+    code: 0xF257
+    uid: a8a1029aa1e7b1de6df0d573176733f8
+    search: []
+
+  - css: "ios-train"
+    code: 0xF258
+    uid: 860fbc9980276f22619001ef082cc420
+    search: []
+
+  - css: "ios-transgender"
+    code: 0xF259
+    uid: e14e9efb15e2312085343f53f7a4218a
+    search: []
+
+  - css: "ios-trash-outline"
+    code: 0xF4C4
+    uid: c52f3946bd721919aaac3972d6f90ae2
+    search: []
+
+  - css: "ios-trash"
+    code: 0xF4C5
+    uid: 0bbfa7aceff9c9d7a13248573bf030fc
+    search: []
+
+  - css: "ios-trending-down"
+    code: 0xF25A
+    uid: 87d482d25de5d137507d15d747034037
+    search: []
+
+  - css: "ios-trending-up"
+    code: 0xF25B
+    uid: a43d136a03ae9418b4d11b4493b4fc4d
+    search: []
+
+  - css: "ios-trophy-outline"
+    code: 0xF25C
+    uid: bcf8a6c3a99b226aa8409c1c3ca40024
+    search: []
+
+  - css: "ios-trophy"
+    code: 0xF25D
+    uid: 8b634f02451e565372d292c30eb2dd23
+    search: []
+
+  - css: "ios-umbrella-outline"
+    code: 0xF25E
+    uid: 767097bb763695f443df33289a719abe
+    search: []
+
+  - css: "ios-umbrella"
+    code: 0xF25F
+    uid: def1daa35da4b13f86c2469d79581e22
+    search: []
+
+  - css: "ios-undo-outline"
+    code: 0xF4C6
+    uid: 4c23312e7233c19aa3370a7256095670
+    search: []
+
+  - css: "ios-undo"
+    code: 0xF4C7
+    uid: c771c2712ab3b076556aaef7762582ed
+    search: []
+
+  - css: "ios-unlock-outline"
+    code: 0xF260
+    uid: 6e699eee49803b136969053aa9731e5d
+    search: []
+
+  - css: "ios-unlock"
+    code: 0xF261
+    uid: ee13dd91d2f2ed16ed75d32a9638f4ef
+    search: []
+
+  - css: "ios-videocam-outline"
+    code: 0xF4CC
+    uid: adb67af11ee8f0ed1279cc5bdb9b5c1f
+    search: []
+
+  - css: "ios-videocam"
+    code: 0xF4CD
+    uid: fbf52af400f90694b785c7cbf093cf37
+    search: []
+
+  - css: "ios-volume-down"
+    code: 0xF262
+    uid: f0f1600a94b894af5d6033d72eabf1d5
+    search: []
+
+  - css: "ios-volume-mute"
+    code: 0xF263
+    uid: e76a9359b1eef364afea56937e940281
+    search: []
+
+  - css: "ios-volume-off"
+    code: 0xF264
+    uid: fcfff64383aaf952878f97835b816e1f
+    search: []
+
+  - css: "ios-volume-up"
+    code: 0xF265
+    uid: c7584fc70f092b68239337de58999828
+    search: []
+
+  - css: "ios-walk"
+    code: 0xF266
+    uid: 5a3fbd8f0d047ec58849332dab8df517
+    search: []
+
+  - css: "ios-warning-outline"
+    code: 0xF267
+    uid: 54938354a8e98538d5223874ad4ace6d
+    search: []
+
+  - css: "ios-warning"
+    code: 0xF268
+    uid: 65df2c6a3332c56cc353f78bcc22a5ff
+    search: []
+
+  - css: "ios-watch"
+    code: 0xF269
+    uid: 80fd5772619bd2f4712f176f178bbcba
+    search: []
+
+  - css: "ios-water-outline"
+    code: 0xF26A
+    uid: ea01f68b09fd6cca2192e5430976685f
+    search: []
+
+  - css: "ios-water"
+    code: 0xF26B
+    uid: d22f2b38343970b11a26d92525205232
+    search: []
+
+  - css: "ios-wifi-outline"
+    code: 0xF26C
+    uid: b91cbcdb1ae44d00248decfe6705bb71
+    search: []
+
+  - css: "ios-wifi"
+    code: 0xF26D
+    uid: cc83a843e0a71715ad14c037f2d0634f
+    search: []
+
+  - css: "ios-wine-outline"
+    code: 0xF26E
+    uid: d2bd944e53323623e50a6565e84406d5
+    search: []
+
+  - css: "ios-wine"
+    code: 0xF26F
+    uid: 9484c84ac09889ad68d3ad8592476020
+    search: []
+
+  - css: "ios-woman-outline"
+    code: 0xF270
+    uid: 944ec57bfe9fb740b4c896c95a69009e
+    search: []
+
+  - css: "ios-woman"
+    code: 0xF271
+    uid: 65fc52bb8a18461731939765f80ab340
+    search: []
+
+  - css: "logo-android"
+    code: 0xF225
+    uid: 109994be25c33c5e263883d3e4e11d59
+    search: []
+
+  - css: "logo-angular"
+    code: 0xF227
+    uid: ccfaf44952ff9a1b9610347c35e8d952
+    search: []
+
+  - css: "logo-apple"
+    code: 0xF229
+    uid: 12ac21629d0b11e7ab8cea41056adf0b
+    search: []
+
+  - css: "logo-bitcoin"
+    code: 0xF22B
+    uid: 82d2572c7aeda746ff6a5cec1f0b55b1
+    search: []
+
+  - css: "logo-buffer"
+    code: 0xF22D
+    uid: 40d376b1c4ca271fe751df913eea8f1c
+    search: []
+
+  - css: "logo-chrome"
+    code: 0xF22F
+    uid: 8cc81c01fa7467e2467f8dfabc6c87af
+    search: []
+
+  - css: "logo-codepen"
+    code: 0xF230
+    uid: d66ad56ddc57cbc90f6b26a6668a44a7
+    search: []
+
+  - css: "logo-css3"
+    code: 0xF231
+    uid: 4e0fc73fdc2417826b0b85c79d819af5
+    search: []
+
+  - css: "logo-designernews"
+    code: 0xF232
+    uid: 43c7ad4ade8532ef03de3d2d8ce1de47
+    search: []
+
+  - css: "logo-dribbble"
+    code: 0xF233
+    uid: 9002b0ad549aa7787abb9b24bef5c13d
+    search: []
+
+  - css: "logo-dropbox"
+    code: 0xF234
+    uid: 1eaa2bf8d80b8e9832f55b3d379e9243
+    search: []
+
+  - css: "logo-euro"
+    code: 0xF235
+    uid: 288ccb2609dd10320da5d529fab1e8f7
+    search: []
+
+  - css: "logo-facebook"
+    code: 0xF236
+    uid: c51db6a79203b733d8ad53e70e244f1a
+    search: []
+
+  - css: "logo-foursquare"
+    code: 0xF237
+    uid: a0029583d23ae1588249fc21c6174b55
+    search: []
+
+  - css: "logo-freebsd-devil"
+    code: 0xF238
+    uid: b0ef6fc28a9cc1c4af0efad8875f7dad
+    search: []
+
+  - css: "logo-github"
+    code: 0xF239
+    uid: 7508b0aed6accfe920012ef3466874d9
+    search: []
+
+  - css: "logo-google"
+    code: 0xF23A
+    uid: 41f56701608491cbf757bbdc0fbbcacb
+    search: []
+
+  - css: "logo-googleplus"
+    code: 0xF23B
+    uid: 21da3d99d591863b402d98f5d65a2c38
+    search: []
+
+  - css: "logo-hackernews"
+    code: 0xF23C
+    uid: ffd253910aec62b5e40554e44f4b403f
+    search: []
+
+  - css: "logo-html5"
+    code: 0xF23D
+    uid: 8b81eba3be86292551c7d3846e8d6428
+    search: []
+
+  - css: "logo-instagram"
+    code: 0xF23E
+    uid: e935b2d4be7417f48c7b41537e278658
+    search: []
+
+  - css: "logo-javascript"
+    code: 0xF23F
+    uid: a901ea80b2bdb0f2dc39f0c27e1061a0
+    search: []
+
+  - css: "logo-linkedin"
+    code: 0xF240
+    uid: 571f0660a1cb488d0b4eb798665709a3
+    search: []
+
+  - css: "logo-markdown"
+    code: 0xF241
+    uid: 6ddfec0b538ad01cd8da240b130dabdd
+    search: []
+
+  - css: "logo-nodejs"
+    code: 0xF242
+    uid: b1c126c3e40de11cc43f026827254502
+    search: []
+
+  - css: "logo-octocat"
+    code: 0xF243
+    uid: d176948bc0582c4c34096eae9ccc37fc
+    search: []
+
+  - css: "logo-pinterest"
+    code: 0xF244
+    uid: c912dbe7a2aa1e1a5c9fc29280292f5e
+    search: []
+
+  - css: "logo-playstation"
+    code: 0xF245
+    uid: b01139801e66058feea1fa7743370dcd
+    search: []
+
+  - css: "logo-python"
+    code: 0xF246
+    uid: b5d34a7ee3280dfbdb6a6ad6c16ee3ee
+    search: []
+
+  - css: "logo-reddit"
+    code: 0xF247
+    uid: cd8ef549ac2511842817f7e0b84623bb
+    search: []
+
+  - css: "logo-rss"
+    code: 0xF248
+    uid: 10243bce5c7d71e855857c4cb6b1e488
+    search: []
+
+  - css: "logo-sass"
+    code: 0xF249
+    uid: 7f1dcad08ca1ce46204b83707052abbf
+    search: []
+
+  - css: "logo-skype"
+    code: 0xF24A
+    uid: b68b5c55e4261ef2a56fbda84d481a79
+    search: []
+
+  - css: "logo-snapchat"
+    code: 0xF24B
+    uid: 5b539f9191856870821a34d831376674
+    search: []
+
+  - css: "logo-steam"
+    code: 0xF24C
+    uid: e7ac149e92b7f6defd82cc8416461fbf
+    search: []
+
+  - css: "logo-tumblr"
+    code: 0xF24D
+    uid: 998e5e28ab1be14eaa0e9972dd8e0acf
+    search: []
+
+  - css: "logo-tux"
+    code: 0xF2AE
+    uid: e823887a897d4881d57fb8aa22ccd23c
+    search: []
+
+  - css: "logo-twitch"
+    code: 0xF2AF
+    uid: c66bb1a2c116976f4372bbca4b84732b
+    search: []
+
+  - css: "logo-twitter"
+    code: 0xF2B0
+    uid: a56b57a51ce3a562607140069124068e
+    search: []
+
+  - css: "logo-usd"
+    code: 0xF2B1
+    uid: 0fba7a55d3d8631f2d96244228875569
+    search: []
+
+  - css: "logo-vimeo"
+    code: 0xF2C4
+    uid: ac4cc57170ec773efbef188efda0cdb5
+    search: []
+
+  - css: "logo-whatsapp"
+    code: 0xF2C5
+    uid: 15744ea6e847d3d48e0326add2549b36
+    search: []
+
+  - css: "logo-windows"
+    code: 0xF32F
+    uid: 2b7b73160c64f6bb68196c2ff7dfa3d5
+    search: []
+
+  - css: "logo-wordpress"
+    code: 0xF330
+    uid: b3c58448c3b50d3f928f9432908bd7f0
+    search: []
+
+  - css: "logo-xbox"
+    code: 0xF34C
+    uid: 6c3d902fb2b5036fed1a151ba8d4db05
+    search: []
+
+  - css: "logo-yahoo"
+    code: 0xF34D
+    uid: 6504ac437810dd812c80c8cbc6ee2757
+    search: []
+
+  - css: "logo-yen"
+    code: 0xF34E
+    uid: bb3060d5efbf6c5ef9f056ade5392d35
+    search: []
+
+  - css: "logo-youtube"
+    code: 0xF34F
+    uid: d425e11aaa64902539c2a932c678e777
+    search: []
+
+  - css: "md-add-circle"
+    code: 0xF272
+    uid: 2e8fa02bc2a9ee630cff564552839d5a
+    search: []
+
+  - css: "md-add"
+    code: 0xF273
+    uid: 41f3cfad0350bef26cec05cd1f98e08d
+    search: []
+
+  - css: "md-alarm"
+    code: 0xF274
+    uid: 015f786edefc4285601ef318d3578d3e
+    search: []
+
+  - css: "md-albums"
+    code: 0xF275
+    uid: bbda319b74a29bd1ced755318aa1ddc1
+    search: []
+
+  - css: "md-alert"
+    code: 0xF276
+    uid: 25126f143307427f2f4edfe0ec90cd33
+    search: []
+
+  - css: "md-american-football"
+    code: 0xF277
+    uid: 1461db4a723f6fc20cd0b2a332f5e2ba
+    search: []
+
+  - css: "md-analytics"
+    code: 0xF278
+    uid: bbc32d6c9de15e4d4621da3a5f7c52d4
+    search: []
+
+  - css: "md-aperture"
+    code: 0xF279
+    uid: 3f081134ac7cfcbab01d42584ac884cf
+    search: []
+
+  - css: "md-apps"
+    code: 0xF27A
+    uid: abb01829947692b5c7ab20f15bf6cabe
+    search: []
+
+  - css: "md-appstore"
+    code: 0xF27B
+    uid: e7fac14222701e7edbb81f3da6997f1d
+    search: []
+
+  - css: "md-archive"
+    code: 0xF27C
+    uid: 5312ee0027f0595992d90b27810779ae
+    search: []
+
+  - css: "md-arrow-back"
+    code: 0xF27D
+    uid: ec97f9f6b0581df7fdc098a174d4411c
+    search: []
+
+  - css: "md-arrow-down"
+    code: 0xF27E
+    uid: 9b5fce74899e29d12bf530e613ff0030
+    search: []
+
+  - css: "md-arrow-dropdown-circle"
+    code: 0xF27F
+    uid: 1513fc340247b8f2c277022ef2645d48
+    search: []
+
+  - css: "md-arrow-dropdown"
+    code: 0xF280
+    uid: b247b1ef19b6f28c52aeadf4d752b84e
+    search: []
+
+  - css: "md-arrow-dropleft-circle"
+    code: 0xF281
+    uid: e1c4872ccbf37edde93c3942945b37f3
+    search: []
+
+  - css: "md-arrow-dropleft"
+    code: 0xF282
+    uid: 97095d65d4bdecbc9af5f1455ba6c053
+    search: []
+
+  - css: "md-arrow-dropright-circle"
+    code: 0xF283
+    uid: ae1b0d82b521beb84cf92dc1cce1a3e4
+    search: []
+
+  - css: "md-arrow-dropright"
+    code: 0xF284
+    uid: 6a6fc21df1619f8ee48407a2c4c504e5
+    search: []
+
+  - css: "md-arrow-dropup-circle"
+    code: 0xF285
+    uid: 3866bc1085b9c1434c857a8c0ffad98c
+    search: []
+
+  - css: "md-arrow-dropup"
+    code: 0xF286
+    uid: 737c5ee4f10b7d670eae01f35e9e8271
+    search: []
+
+  - css: "md-arrow-forward"
+    code: 0xF287
+    uid: 6849fe91b53533f73ad246e92bb8b92b
+    search: []
+
+  - css: "md-arrow-round-back"
+    code: 0xF288
+    uid: e45fd4ae42b8ac1b99813299fe4813f0
+    search: []
+
+  - css: "md-arrow-round-down"
+    code: 0xF289
+    uid: c4e074ff530d00fc76738782479a77e6
+    search: []
+
+  - css: "md-arrow-round-forward"
+    code: 0xF28A
+    uid: 6eacc6ba9220d66ede3fa82ff02b4d69
+    search: []
+
+  - css: "md-arrow-round-up"
+    code: 0xF28B
+    uid: 65d0b4cec00a3d432eecb2c1a11f7fdf
+    search: []
+
+  - css: "md-arrow-up"
+    code: 0xF28C
+    uid: 5468492fe4ee0b44b30da0b4ee503569
+    search: []
+
+  - css: "md-at"
+    code: 0xF28D
+    uid: 9eea333720405f558fcc196294019181
+    search: []
+
+  - css: "md-attach"
+    code: 0xF28E
+    uid: 45fd1468eaa8ef672c018ed6767816ac
+    search: []
+
+  - css: "md-backspace"
+    code: 0xF28F
+    uid: 1b4fcc30a9920cd28b017baab0624d75
+    search: []
+
+  - css: "md-barcode"
+    code: 0xF290
+    uid: aeab58f753d03eeb78366af8f1c28ab2
+    search: []
+
+  - css: "md-baseball"
+    code: 0xF291
+    uid: eb7af51eec8333594313018ac9b54f8a
+    search: []
+
+  - css: "md-basket"
+    code: 0xF292
+    uid: ccd3761ea34966e62628db35b18ecf85
+    search: []
+
+  - css: "md-basketball"
+    code: 0xF293
+    uid: 4574e26f87e408f53d5691ca2523084b
+    search: []
+
+  - css: "md-battery-charging"
+    code: 0xF294
+    uid: ecf45c261be5b82cd557077335296983
+    search: []
+
+  - css: "md-battery-dead"
+    code: 0xF295
+    uid: c2bf12018c28fb9acbe9bd3ca8c0513b
+    search: []
+
+  - css: "md-battery-full"
+    code: 0xF296
+    uid: a7f3578f2fcd6bb94598e9f7d3760ddf
+    search: []
+
+  - css: "md-beaker"
+    code: 0xF297
+    uid: 3c237f85b3d33d39b82e30397b731a3a
+    search: []
+
+  - css: "md-beer"
+    code: 0xF298
+    uid: 92add2649a500e00c651029a9d0d16dd
+    search: []
+
+  - css: "md-bicycle"
+    code: 0xF299
+    uid: e1fb5e8ebb05db484411ad5ea62f2360
+    search: []
+
+  - css: "md-bluetooth"
+    code: 0xF29A
+    uid: 82e0fb5fe3b42c95474827b68607564d
+    search: []
+
+  - css: "md-boat"
+    code: 0xF29B
+    uid: f87b70f47ddf52622e76faba1740d23a
+    search: []
+
+  - css: "md-body"
+    code: 0xF29C
+    uid: fee194235fb28dfa6f3e7f0271e6d6b9
+    search: []
+
+  - css: "md-bonfire"
+    code: 0xF29D
+    uid: 3a3c89583e49b217192e2ab866d6cad2
+    search: []
+
+  - css: "md-book"
+    code: 0xF29E
+    uid: a4f70ef1b759c01fb39f49d894bbfb37
+    search: []
+
+  - css: "md-bookmark"
+    code: 0xF29F
+    uid: ecae79098e874e58ac1804dd1cc7141e
+    search: []
+
+  - css: "md-bookmarks"
+    code: 0xF2A0
+    uid: 5d3472bf5889932234b11265c0fada8e
+    search: []
+
+  - css: "md-bowtie"
+    code: 0xF2A1
+    uid: e991d324c05af26eaa0afaf27c0a895e
+    search: []
+
+  - css: "md-briefcase"
+    code: 0xF2A2
+    uid: 2a196579ace423b903ad84c58eda4647
+    search: []
+
+  - css: "md-browsers"
+    code: 0xF2A3
+    uid: b8e79fbf40aa122cb120115b1ec0ca9e
+    search: []
+
+  - css: "md-brush"
+    code: 0xF2A4
+    uid: 4c379b59b7372ee89e174a2afe26a848
+    search: []
+
+  - css: "md-bug"
+    code: 0xF2A5
+    uid: f58883aea853e2586d29247a4e9f10c9
+    search: []
+
+  - css: "md-build"
+    code: 0xF2A6
+    uid: 2f3d1482d7c22875f3abde6f62698bb1
+    search: []
+
+  - css: "md-bulb"
+    code: 0xF2A7
+    uid: ef74ba084ff19911c25861c2c6ff7a85
+    search: []
+
+  - css: "md-bus"
+    code: 0xF2A8
+    uid: 8e4da4a63dfaf9ae9bc0dc2a35ec35de
+    search: []
+
+  - css: "md-cafe"
+    code: 0xF2A9
+    uid: 2adf5c0ce75e00dccc19f4eb765fcf9b
+    search: []
+
+  - css: "md-calculator"
+    code: 0xF2AA
+    uid: 2cbb17f10fa0ee32e9724444bb192e57
+    search: []
+
+  - css: "md-calendar"
+    code: 0xF2AB
+    uid: 4116312d46ab6ad299bdd64e1882c4e7
+    search: []
+
+  - css: "md-call"
+    code: 0xF2AC
+    uid: e46c0d126716e4b6d9ea73f4e21ba17c
+    search: []
+
+  - css: "md-camera"
+    code: 0xF2AD
+    uid: 8562ad199eb4283781983a93f4cd13cb
+    search: []
+
+  - css: "md-car"
+    code: 0xF2B2
+    uid: 0cc058d3bb086feeb9ecc6bbd4a3d97d
+    search: []
+
+  - css: "md-card"
+    code: 0xF2B3
+    uid: 2756ab2389f631fae7351a54aba16cdc
+    search: []
+
+  - css: "md-cart"
+    code: 0xF2B4
+    uid: 259e67c6a304c750bebbfb90843d643d
+    search: []
+
+  - css: "md-cash"
+    code: 0xF2B5
+    uid: 638887622ec2fb908b5877c8fbb9c734
+    search: []
+
+  - css: "md-chatboxes"
+    code: 0xF2B6
+    uid: bbc3b06e21148d28dd6fe3dd9ef54c07
+    search: []
+
+  - css: "md-chatbubbles"
+    code: 0xF2B7
+    uid: 2e73b689d83e0644524d1dab6f343de5
+    search: []
+
+  - css: "md-checkbox-outline"
+    code: 0xF2B8
+    uid: da11d9deb7e962592d0bcd98c0ceba90
+    search: []
+
+  - css: "md-checkbox"
+    code: 0xF2B9
+    uid: c4d12ac6b9aaa3a72570148fe2b22cbc
+    search: []
+
+  - css: "md-checkmark-circle-outline"
+    code: 0xF2BA
+    uid: 79c4cdca6d6fd28be5e6f3727d13abb4
+    search: []
+
+  - css: "md-checkmark-circle"
+    code: 0xF2BB
+    uid: 0b9f586375d127ea638875d4bb1aaa0b
+    search: []
+
+  - css: "md-checkmark"
+    code: 0xF2BC
+    uid: a9f54dbd5add1a54d94cbf83918da0e1
+    search: []
+
+  - css: "md-clipboard"
+    code: 0xF2BD
+    uid: fc98dbc21a29cccd46b7b21b92bfff82
+    search: []
+
+  - css: "md-clock"
+    code: 0xF2BE
+    uid: 17b3b695258286b96830d63a88195cc9
+    search: []
+
+  - css: "md-close-circle"
+    code: 0xF2BF
+    uid: 8445d76e8d503c021b4cfde17de83291
+    search: []
+
+  - css: "md-close"
+    code: 0xF2C0
+    uid: cd78874b9419b955a1d805f049812157
+    search: []
+
+  - css: "md-closed-captioning"
+    code: 0xF2C1
+    uid: 059aae18fd0442b2561e7a1904f9c5ad
+    search: []
+
+  - css: "md-cloud-circle"
+    code: 0xF2C2
+    uid: 7b717f4ebf3e64923c768cef9c954987
+    search: []
+
+  - css: "md-cloud-done"
+    code: 0xF2C3
+    uid: d381a03be70808bbcd39bdd993ef99d4
+    search: []
+
+  - css: "md-cloud-download"
+    code: 0xF2C6
+    uid: d99391c38dea068d98b8c2ebaff2c07d
+    search: []
+
+  - css: "md-cloud-outline"
+    code: 0xF2C7
+    uid: c37421a7c0af45c3aad4670d0a419c9d
+    search: []
+
+  - css: "md-cloud-upload"
+    code: 0xF2C8
+    uid: 4660fac6aa9ea8d4eab7e58a69e35da7
+    search: []
+
+  - css: "md-cloud"
+    code: 0xF2C9
+    uid: ecbacadfb72415a9c8a7e2e4bbba0e31
+    search: []
+
+  - css: "md-cloudy-night"
+    code: 0xF2CA
+    uid: 67b2de5c88acf6c8b7945bf1117a08ea
+    search: []
+
+  - css: "md-cloudy"
+    code: 0xF2CB
+    uid: 86443acf4000a885bd8ea57d08289250
+    search: []
+
+  - css: "md-code-download"
+    code: 0xF2CC
+    uid: 6e6f4788cdbde3934a534cd390beddc3
+    search: []
+
+  - css: "md-code-working"
+    code: 0xF2CD
+    uid: cb303cb4999fa7b295cc9cf2b69088bd
+    search: []
+
+  - css: "md-code"
+    code: 0xF2CE
+    uid: 2d5dc459c36cfe5c937c91e92866f18e
+    search: []
+
+  - css: "md-cog"
+    code: 0xF2CF
+    uid: 88a37f26c525edb950a0413f9aecd3e9
+    search: []
+
+  - css: "md-color-fill"
+    code: 0xF2D0
+    uid: df05810ea38a7cc9c7e70a82a3447699
+    search: []
+
+  - css: "md-color-filter"
+    code: 0xF2D1
+    uid: a4bbdcf2d1d4f30eee017b56de0ec92a
+    search: []
+
+  - css: "md-color-palette"
+    code: 0xF2D2
+    uid: c82613d7a92dad23b5bd1f629cd92622
+    search: []
+
+  - css: "md-color-wand"
+    code: 0xF2D3
+    uid: bcedc699df9798948c6efe73ac13fc51
+    search: []
+
+  - css: "md-compass"
+    code: 0xF2D4
+    uid: 0e636788e82884fd044a585bf4f96853
+    search: []
+
+  - css: "md-construct"
+    code: 0xF2D5
+    uid: fa2686de4e4fa703a3163522dbae796c
+    search: []
+
+  - css: "md-contact"
+    code: 0xF2D6
+    uid: ab337f0f1decddee81e20f96753360a6
+    search: []
+
+  - css: "md-contacts"
+    code: 0xF2D7
+    uid: 6129d3808211e3cbc522d21c7174a687
+    search: []
+
+  - css: "md-contract"
+    code: 0xF2D8
+    uid: af23ca4c791804388b4934448aeafafd
+    search: []
+
+  - css: "md-contrast"
+    code: 0xF2D9
+    uid: d02ab4c9229373fc9f51a43992ed13b3
+    search: []
+
+  - css: "md-copy"
+    code: 0xF2DA
+    uid: 7c58aaaadb3d9bb9e1db42c304dd5122
+    search: []
+
+  - css: "md-create"
+    code: 0xF2DB
+    uid: d75bf66cbbabb0fc3cc4075fc26f3f60
+    search: []
+
+  - css: "md-crop"
+    code: 0xF2DC
+    uid: 4c6fbf5f39e86d27757e56b145c0fcea
+    search: []
+
+  - css: "md-cube"
+    code: 0xF2DD
+    uid: a7c4d49b8a7bfbf3178bd38ec8aff524
+    search: []
+
+  - css: "md-cut"
+    code: 0xF2DE
+    uid: 0f94ec225e435815bf94c5b5e61453ab
+    search: []
+
+  - css: "md-desktop"
+    code: 0xF2DF
+    uid: 7fa492fffebb65571e1ac2918db656cd
+    search: []
+
+  - css: "md-disc"
+    code: 0xF2E0
+    uid: 70a2ce10fadbb6cfeaaaeaf33707df00
+    search: []
+
+  - css: "md-document"
+    code: 0xF2E1
+    uid: d752e1aebf842d4680b3cb50cf1503dd
+    search: []
+
+  - css: "md-done-all"
+    code: 0xF2E2
+    uid: e9146a9f08a6f2cf9d61a5f1066d9908
+    search: []
+
+  - css: "md-download"
+    code: 0xF2E3
+    uid: 26e9f5e936c39cae2ef21fa329eafe1c
+    search: []
+
+  - css: "md-easel"
+    code: 0xF2E4
+    uid: 5f52eaa9ca824e5bf611cb2b9d794992
+    search: []
+
+  - css: "md-egg"
+    code: 0xF2E5
+    uid: 10d79e0d9d42137a245937bb9eaf05ca
+    search: []
+
+  - css: "md-exit"
+    code: 0xF2E6
+    uid: bc6e60981642209389f8f58a039a1902
+    search: []
+
+  - css: "md-expand"
+    code: 0xF2E7
+    uid: f212cf3bfca42b83734fafd66e889994
+    search: []
+
+  - css: "md-eye-off"
+    code: 0xF2E8
+    uid: 58134b9308f5d5f8941850f4c1595ea4
+    search: []
+
+  - css: "md-eye"
+    code: 0xF2E9
+    uid: 15e50b5a3949bd838d3162d30a8a9897
+    search: []
+
+  - css: "md-fastforward"
+    code: 0xF2EA
+    uid: 73a883e8757a4457dfd9a16f1eb6260c
+    search: []
+
+  - css: "md-female"
+    code: 0xF2EB
+    uid: ae86000d14e3a3546b7a330f05207608
+    search: []
+
+  - css: "md-filing"
+    code: 0xF2EC
+    uid: 527960e5e88cc53f19232185e61235ff
+    search: []
+
+  - css: "md-film"
+    code: 0xF2ED
+    uid: 2e2620d7ef86c6cd08042d4c0e2a9fa3
+    search: []
+
+  - css: "md-finger-print"
+    code: 0xF2EE
+    uid: 8e08b3aedeb5b00daf1fd88d5409a291
+    search: []
+
+  - css: "md-flag"
+    code: 0xF2EF
+    uid: cdfb2dfc36250a6e80e6915193d92ef4
+    search: []
+
+  - css: "md-flame"
+    code: 0xF2F0
+    uid: d85de2e4b87bbdac4ff40c04cc4f2d42
+    search: []
+
+  - css: "md-flash"
+    code: 0xF2F1
+    uid: 789e42c09301113d9da7c2697acd3f43
+    search: []
+
+  - css: "md-flask"
+    code: 0xF2F2
+    uid: accc27f001f9b6b3551cba2131771c09
+    search: []
+
+  - css: "md-flower"
+    code: 0xF2F3
+    uid: d9b031e744a96e5cb6b24b116f08a60c
+    search: []
+
+  - css: "md-folder-open"
+    code: 0xF2F4
+    uid: b1a4914e51dcb744420dbaec0ae550ad
+    search: []
+
+  - css: "md-folder"
+    code: 0xF2F5
+    uid: c38d348cc1cabe1bf0797e965d032fd7
+    search: []
+
+  - css: "md-football"
+    code: 0xF2F6
+    uid: ae412f042a3db8a66bf14fde4beb8c06
+    search: []
+
+  - css: "md-funnel"
+    code: 0xF2F7
+    uid: 613aec059994f4042629e8db5ca1445b
+    search: []
+
+  - css: "md-game-controller-a"
+    code: 0xF2F8
+    uid: d1588d2693d4b135f4be78b09e20cc00
+    search: []
+
+  - css: "md-game-controller-b"
+    code: 0xF2F9
+    uid: 68fb3c7db08bee36c9688844a6a4133b
+    search: []
+
+  - css: "md-git-branch"
+    code: 0xF2FA
+    uid: 8d5d7a62e0ae55881cc42ed7ddd642f8
+    search: []
+
+  - css: "md-git-commit"
+    code: 0xF2FB
+    uid: ba779aaeebff1444cc30951d85147795
+    search: []
+
+  - css: "md-git-compare"
+    code: 0xF2FC
+    uid: 4bfb1309cdc5173663dab65920c96d52
+    search: []
+
+  - css: "md-git-merge"
+    code: 0xF2FD
+    uid: 9c7f4409d06427801e6c70e2610f0793
+    search: []
+
+  - css: "md-git-network"
+    code: 0xF2FE
+    uid: 45350de4a1de63e064be7ebc99e4c46c
+    search: []
+
+  - css: "md-git-pull-request"
+    code: 0xF2FF
+    uid: ba00f2b57368937d3f13662c121a428a
+    search: []
+
+  - css: "md-glasses"
+    code: 0xF300
+    uid: 7e8c25b412def3bbe258337afdc4e03f
+    search: []
+
+  - css: "md-globe"
+    code: 0xF301
+    uid: 0c1c8ff8f31a54287525797a46ccf29a
+    search: []
+
+  - css: "md-grid"
+    code: 0xF302
+    uid: 0d5daa323c7712b6d17c648ef4f61811
+    search: []
+
+  - css: "md-hammer"
+    code: 0xF303
+    uid: db0fcbb3b174c21841ed0b62965c8be2
+    search: []
+
+  - css: "md-hand"
+    code: 0xF304
+    uid: e4f58a45f29d6281e60e1faf1b1df18d
+    search: []
+
+  - css: "md-happy"
+    code: 0xF305
+    uid: b6dd36201a5206a7c09cb4c598434882
+    search: []
+
+  - css: "md-headset"
+    code: 0xF306
+    uid: 69ed9d6a9fd67cbfa68e94d3c0447a3b
+    search: []
+
+  - css: "md-heart-outline"
+    code: 0xF307
+    uid: f71fdddd67899cbd7ad75794e9e95f90
+    search: []
+
+  - css: "md-heart"
+    code: 0xF308
+    uid: 204b187fae7227c937fe2f3213806b20
+    search: []
+
+  - css: "md-help-buoy"
+    code: 0xF309
+    uid: 201155cc4688179de2be971d5b20a3b2
+    search: []
+
+  - css: "md-help-circle"
+    code: 0xF30A
+    uid: 9a776b74a1c169d1e8f012ba9cbb939e
+    search: []
+
+  - css: "md-help"
+    code: 0xF30B
+    uid: eaba092846ae5d0bb060196a900ae5a1
+    search: []
+
+  - css: "md-home"
+    code: 0xF30C
+    uid: ca2d1568b29e25bb103ee361ba7c99e1
+    search: []
+
+  - css: "md-ice-cream"
+    code: 0xF30D
+    uid: ef42048022ea2635a628854292eb6e43
+    search: []
+
+  - css: "md-image"
+    code: 0xF30E
+    uid: de540c5c0b5c5e58d9e75309e652d351
+    search: []
+
+  - css: "md-images"
+    code: 0xF30F
+    uid: 28510f7d89521630f6e5228cf38c3e5e
+    search: []
+
+  - css: "md-infinite"
+    code: 0xF310
+    uid: 250adc6d38f59f199846f88aef843b0e
+    search: []
+
+  - css: "md-information-circle"
+    code: 0xF311
+    uid: 52610d631fbaf266a38a27a01d4178d6
+    search: []
+
+  - css: "md-information"
+    code: 0xF312
+    uid: ab6ca92d4c0e5fa20f3f51cb4e8e349f
+    search: []
+
+  - css: "md-ionic"
+    code: 0xF313
+    uid: db197ef9a35d380c8c5b54f3732a0e7b
+    search: []
+
+  - css: "md-ionitron"
+    code: 0xF314
+    uid: 9315c6eaeb3b755899b6632a6ddee7fa
+    search: []
+
+  - css: "md-jet"
+    code: 0xF315
+    uid: 5d391585bf329078009281616c859c47
+    search: []
+
+  - css: "md-key"
+    code: 0xF316
+    uid: e40390ec2eca5f01e1d81fc4cc96e16c
+    search: []
+
+  - css: "md-keypad"
+    code: 0xF317
+    uid: d368cc55b1667cc6460cb5626bdb6174
+    search: []
+
+  - css: "md-laptop"
+    code: 0xF318
+    uid: ece0ebe7124d39338f40d35c79ead57e
+    search: []
+
+  - css: "md-leaf"
+    code: 0xF319
+    uid: 4a003301043c5691f7799196ec7d3ef7
+    search: []
+
+  - css: "md-link"
+    code: 0xF22E
+    uid: 45f414002e4ba54b771d76db02e93bb5
+    search: []
+
+  - css: "md-list-box"
+    code: 0xF31A
+    uid: 64bd99756c211e9cfea77a8cc0cbdbb0
+    search: []
+
+  - css: "md-list"
+    code: 0xF31B
+    uid: 88c207567c817259dad77cb01770bb76
+    search: []
+
+  - css: "md-locate"
+    code: 0xF31C
+    uid: a4afec1d8661d4fe12cc300bc117bba2
+    search: []
+
+  - css: "md-lock"
+    code: 0xF31D
+    uid: 4d908dc3ee314f780647599c5fb226d6
+    search: []
+
+  - css: "md-log-in"
+    code: 0xF31E
+    uid: e0dcc3569057e1e2cb8af2924484a7fd
+    search: []
+
+  - css: "md-log-out"
+    code: 0xF31F
+    uid: 611e4d8282833e20c4b8aa713f1802eb
+    search: []
+
+  - css: "md-magnet"
+    code: 0xF320
+    uid: 8bf9bccda40f996798c6f9807f87e7a3
+    search: []
+
+  - css: "md-mail-open"
+    code: 0xF321
+    uid: c9edc0a9de2f729107cf802f4c407a9c
+    search: []
+
+  - css: "md-mail"
+    code: 0xF322
+    uid: c0b871c895e065fcf8a467a7111d13c7
+    search: []
+
+  - css: "md-male"
+    code: 0xF323
+    uid: 399b4aa3515e74df7c89cab8a746dd4f
+    search: []
+
+  - css: "md-man"
+    code: 0xF324
+    uid: 7fc3f6ac63464a6e1e4c5624677ff979
+    search: []
+
+  - css: "md-map"
+    code: 0xF325
+    uid: 209cc1ec1eb058a3abea5d3bd556af6d
+    search: []
+
+  - css: "md-medal"
+    code: 0xF326
+    uid: cea75ef7b3c1efee2eca955f9a65eb88
+    search: []
+
+  - css: "md-medical"
+    code: 0xF327
+    uid: 6695da813845d98d2ccb80fbaa397ec6
+    search: []
+
+  - css: "md-medkit"
+    code: 0xF328
+    uid: c781140e85fc0541ac9b91b2ad5d9244
+    search: []
+
+  - css: "md-megaphone"
+    code: 0xF329
+    uid: 96552f2199c6cc3b3a5e413e7004abd1
+    search: []
+
+  - css: "md-menu"
+    code: 0xF32A
+    uid: 1bf18269c06f68ed38e176f4c15ed58a
+    search: []
+
+  - css: "md-mic-off"
+    code: 0xF32B
+    uid: 61f7234e29b1b6d94f62058249369e8a
+    search: []
+
+  - css: "md-mic"
+    code: 0xF32C
+    uid: 0b2901cd8d2ba224e3d8d85067cf8091
+    search: []
+
+  - css: "md-microphone"
+    code: 0xF32D
+    uid: 63a79437758a45a7b9006eb6a51a19ad
+    search: []
+
+  - css: "md-moon"
+    code: 0xF32E
+    uid: 6787635f5756ac12e1a98ea7e4c7733c
+    search: []
+
+  - css: "md-more"
+    code: 0xF1C9
+    uid: 60453a35fa2b2d19eb631e55543d3174
+    search: []
+
+  - css: "md-move"
+    code: 0xF331
+    uid: df2feeb61b6a5608b525644c635e7794
+    search: []
+
+  - css: "md-musical-note"
+    code: 0xF332
+    uid: 4405ae2feea507cc4991ef096c788d50
+    search: []
+
+  - css: "md-musical-notes"
+    code: 0xF333
+    uid: 56c7d5fa8373c412b248d6487f9f3912
+    search: []
+
+  - css: "md-navigate"
+    code: 0xF334
+    uid: f8d01542bf3fa357052ffebc32de8fc3
+    search: []
+
+  - css: "md-no-smoking"
+    code: 0xF335
+    uid: 6591b70313921d2b44a330279057fb85
+    search: []
+
+  - css: "md-notifications-off"
+    code: 0xF336
+    uid: 5272c6b6e1b75d16c1627bc709f9a82b
+    search: []
+
+  - css: "md-notifications-outline"
+    code: 0xF337
+    uid: 8c58647ca57f70c6bffeb4ed4166763b
+    search: []
+
+  - css: "md-notifications"
+    code: 0xF338
+    uid: 239b41a7fa10920d38b3b2776d14232d
+    search: []
+
+  - css: "md-nuclear"
+    code: 0xF339
+    uid: b17f801e84a789a4debd1c5136ce22a6
+    search: []
+
+  - css: "md-nutrition"
+    code: 0xF33A
+    uid: 252dde35f3c777adb06d8846e0b96e4e
+    search: []
+
+  - css: "md-open"
+    code: 0xF33B
+    uid: 448a8b4d3d179de5fb51bb377d9a37d9
+    search: []
+
+  - css: "md-options"
+    code: 0xF33C
+    uid: 8755fc1231db951465e227929be16cea
+    search: []
+
+  - css: "md-outlet"
+    code: 0xF33D
+    uid: e95c205e6581f4000041635b009d9c54
+    search: []
+
+  - css: "md-paper-plane"
+    code: 0xF33E
+    uid: aa9f33da042c96ade316f47828d7541e
+    search: []
+
+  - css: "md-paper"
+    code: 0xF33F
+    uid: 497074e1c95cb5f1ce813c341bfbedf9
+    search: []
+
+  - css: "md-partly-sunny"
+    code: 0xF340
+    uid: 12f2df00c52bfd5cb79cae5e53980191
+    search: []
+
+  - css: "md-pause"
+    code: 0xF341
+    uid: de77822172b3a35096d26a9250320924
+    search: []
+
+  - css: "md-paw"
+    code: 0xF342
+    uid: f1c807d598842265bb58e943007ca301
+    search: []
+
+  - css: "md-people"
+    code: 0xF343
+    uid: a2d64e548a2453b59947c8909500ad36
+    search: []
+
+  - css: "md-person-add"
+    code: 0xF344
+    uid: 48cd26c2c458a47a10ec4d7d2b352ccc
+    search: []
+
+  - css: "md-person"
+    code: 0xF345
+    uid: 49c1e0d8af0adcc316eb5016cb0cf226
+    search: []
+
+  - css: "md-phone-landscape"
+    code: 0xF346
+    uid: 0a9fbf40902c9f20c36004d52d0342a2
+    search: []
+
+  - css: "md-phone-portrait"
+    code: 0xF347
+    uid: 2a8b527a9d6fdfed58a4b11c89b92fce
+    search: []
+
+  - css: "md-photos"
+    code: 0xF348
+    uid: bd32d4f23935f7d1c3f42b30427bf5ff
+    search: []
+
+  - css: "md-pie"
+    code: 0xF349
+    uid: 6f9ab083685ee16c391748d16af932c7
+    search: []
+
+  - css: "md-pin"
+    code: 0xF34A
+    uid: 9d16d0ef4534a1a28dd1b37c8d7fb688
+    search: []
+
+  - css: "md-pint"
+    code: 0xF34B
+    uid: 3719b6b2525cc4cfa2b4c2ef102f9856
+    search: []
+
+  - css: "md-pizza"
+    code: 0xF354
+    uid: f8fd31dc5450b87f48d4072d4a1d340f
+    search: []
+
+  - css: "md-plane"
+    code: 0xF355
+    uid: caa2776fd1329efd42c4568de4514b76
+    search: []
+
+  - css: "md-planet"
+    code: 0xF356
+    uid: 95ba66fb70a4d7476bcc8d47709f0a2d
+    search: []
+
+  - css: "md-play"
+    code: 0xF357
+    uid: 98ea95dfc739c1941d462237654c1346
+    search: []
+
+  - css: "md-podium"
+    code: 0xF358
+    uid: b9c87fcbe9eab9852979622d1d450e9e
+    search: []
+
+  - css: "md-power"
+    code: 0xF359
+    uid: 3c406944f7a1d4d2dfc4091f019e9f4e
+    search: []
+
+  - css: "md-pricetag"
+    code: 0xF35A
+    uid: b5ef32db849583a65d109581829d35d9
+    search: []
+
+  - css: "md-pricetags"
+    code: 0xF35B
+    uid: b8091b0aa01c5cdc5bdcd30576344175
+    search: []
+
+  - css: "md-print"
+    code: 0xF35C
+    uid: 182ce11c25087788d02518760ab3b76f
+    search: []
+
+  - css: "md-pulse"
+    code: 0xF35D
+    uid: f650ac5b68606bacc1f9201971a14f4a
+    search: []
+
+  - css: "md-qr-scanner"
+    code: 0xF35E
+    uid: 39c1ab11b7bc8c880a23625c3de0b139
+    search: []
+
+  - css: "md-quote"
+    code: 0xF35F
+    uid: f958d8019ab6d1dd94b6b5d7eea0e1a5
+    search: []
+
+  - css: "md-radio-button-off"
+    code: 0xF360
+    uid: bd75a9184909de78593f6b7685a4a141
+    search: []
+
+  - css: "md-radio-button-on"
+    code: 0xF361
+    uid: 297f4c284dd873f8778655f10073cc4b
+    search: []
+
+  - css: "md-radio"
+    code: 0xF362
+    uid: 36360d98cae1aa76c251f5de2833aa81
+    search: []
+
+  - css: "md-rainy"
+    code: 0xF363
+    uid: 23363f285f86345ae9690bafab014d4a
+    search: []
+
+  - css: "md-recording"
+    code: 0xF364
+    uid: 404b40ec2b3cf138b77ed9d53d9e5782
+    search: []
+
+  - css: "md-redo"
+    code: 0xF365
+    uid: d761d2eb45360a94edd1dc0fc15b17fc
+    search: []
+
+  - css: "md-refresh-circle"
+    code: 0xF228
+    uid: e8682d0f11ac57c6a080644039ad05d9
+    search: []
+
+  - css: "md-refresh"
+    code: 0xF366
+    uid: 896061816b75fc94c70e6f06d667cac8
+    search: []
+
+  - css: "md-remove-circle"
+    code: 0xF367
+    uid: 7681423836d9ddca10c6368c42c307c7
+    search: []
+
+  - css: "md-remove"
+    code: 0xF368
+    uid: aa59df69a1eec282395455dd49e1e7fc
+    search: []
+
+  - css: "md-reorder"
+    code: 0xF369
+    uid: 26940c68afc211c0aab45c9ef9b7cc80
+    search: []
+
+  - css: "md-repeat"
+    code: 0xF36A
+    uid: 63e51aef66d8efe99eaa10ba0496fbad
+    search: []
+
+  - css: "md-resize"
+    code: 0xF36B
+    uid: f4beec5aa431e325ea0a8a87daf8f00e
+    search: []
+
+  - css: "md-restaurant"
+    code: 0xF36C
+    uid: 58a37585ea57b721991e96726082ac8e
+    search: []
+
+  - css: "md-return-left"
+    code: 0xF36D
+    uid: 4041a920b46a354bb4fcfe63b49e683c
+    search: []
+
+  - css: "md-return-right"
+    code: 0xF36E
+    uid: 2cd5b0c55a59098f6d79e83ca1823fb6
+    search: []
+
+  - css: "md-reverse-camera"
+    code: 0xF36F
+    uid: 23acc2a841bf82f4320634f95896c0fa
+    search: []
+
+  - css: "md-rewind"
+    code: 0xF370
+    uid: 2356f8e86635e7ef7173dee9e14b7f35
+    search: []
+
+  - css: "md-ribbon"
+    code: 0xF371
+    uid: 63c47b28201f7a448dbdd34cdc4171ab
+    search: []
+
+  - css: "md-rose"
+    code: 0xF372
+    uid: 500e2c1fd042ee71e1e6d09c78c56066
+    search: []
+
+  - css: "md-sad"
+    code: 0xF373
+    uid: 06ca0f10fde3a6ad33d951325b5b0e02
+    search: []
+
+  - css: "md-school"
+    code: 0xF374
+    uid: 52eb229d4d1c6053b93b2d9a08ac37ab
+    search: []
+
+  - css: "md-search"
+    code: 0xF375
+    uid: 349379467365b563a4b209f4e6a4ded7
+    search: []
+
+  - css: "md-send"
+    code: 0xF376
+    uid: cfc51714a6c95f7e5312f0f62a142fab
+    search: []
+
+  - css: "md-settings"
+    code: 0xF377
+    uid: a2c83659eb9c99534b3f285574c7e20f
+    search: []
+
+  - css: "md-share-alt"
+    code: 0xF378
+    uid: 8b092b82fc8f0df5be1fb7f81322eb08
+    search: []
+
+  - css: "md-share"
+    code: 0xF379
+    uid: 79a11db1244edb1c8c4fdb77ba5309fb
+    search: []
+
+  - css: "md-shirt"
+    code: 0xF37A
+    uid: cb3cdcc5804f4ae9f47f4e85928e519f
+    search: []
+
+  - css: "md-shuffle"
+    code: 0xF37B
+    uid: 1018fca00ed4383306db1584356b0430
+    search: []
+
+  - css: "md-skip-backward"
+    code: 0xF37C
+    uid: 6c00b47b190382926bcf5f7c4fe5043d
+    search: []
+
+  - css: "md-skip-forward"
+    code: 0xF37D
+    uid: 086ea1c20dcf3bc4448f8c5b2e5aa0cc
+    search: []
+
+  - css: "md-snow"
+    code: 0xF37E
+    uid: 3eef2e82bf01eb4b6eefc42abf7520c1
+    search: []
+
+  - css: "md-speedometer"
+    code: 0xF37F
+    uid: cf45d09c2073c999950578823124a9b3
+    search: []
+
+  - css: "md-square-outline"
+    code: 0xF380
+    uid: ae4df38b5307ba0e6ec5fdecbbad62ae
+    search: []
+
+  - css: "md-square"
+    code: 0xF381
+    uid: e33a7fbe6ef8b9887325f950b629fe8b
+    search: []
+
+  - css: "md-star-half"
+    code: 0xF382
+    uid: 79ca6d7325e49dd4bc7020c3bd3f65dd
+    search: []
+
+  - css: "md-star-outline"
+    code: 0xF383
+    uid: 9e56253546ffa8a7642bf8cfed69af9e
+    search: []
+
+  - css: "md-star"
+    code: 0xF384
+    uid: bed9a6b087191d3105f9aacb0685bba3
+    search: []
+
+  - css: "md-stats"
+    code: 0xF385
+    uid: c5793e0e3e30144655a53c365537a484
+    search: []
+
+  - css: "md-stopwatch"
+    code: 0xF386
+    uid: e2b0b7891674a0d6045740640956e8d3
+    search: []
+
+  - css: "md-subway"
+    code: 0xF387
+    uid: 00da1174a6263fb3a879b88dbb2a5b59
+    search: []
+
+  - css: "md-sunny"
+    code: 0xF388
+    uid: 01dfd6206221544013fc3d55a1b9b76c
+    search: []
+
+  - css: "md-swap"
+    code: 0xF389
+    uid: 181b6d4da9dfd8877733399fcf9a47b3
+    search: []
+
+  - css: "md-switch"
+    code: 0xF38A
+    uid: ba5b561c851225c736dc04b0619fd53a
+    search: []
+
+  - css: "md-sync"
+    code: 0xF38B
+    uid: 07b28c2d45a48ec4e85586d8753eb8ee
+    search: []
+
+  - css: "md-tablet-landscape"
+    code: 0xF38C
+    uid: 2094768b887ee9eed5e496b038b88cbe
+    search: []
+
+  - css: "md-tablet-portrait"
+    code: 0xF38D
+    uid: 02f00f90c438899f005db9bec2c75e2f
+    search: []
+
+  - css: "md-tennisball"
+    code: 0xF38E
+    uid: b993ff9ddc979af7b680268abcd4dd78
+    search: []
+
+  - css: "md-text"
+    code: 0xF38F
+    uid: 121ff778d854ea6f9384b0d0a95d2225
+    search: []
+
+  - css: "md-thermometer"
+    code: 0xF390
+    uid: e68086739e38ed0a31d84313517c8960
+    search: []
+
+  - css: "md-thumbs-down"
+    code: 0xF391
+    uid: 94e80e595b760614e05b8fd86120fe08
+    search: []
+
+  - css: "md-thumbs-up"
+    code: 0xF392
+    uid: 1928ca37fa697fabd1ba6b16bf042839
+    search: []
+
+  - css: "md-thunderstorm"
+    code: 0xF393
+    uid: 148a2c1467f9993608c542df7b25b667
+    search: []
+
+  - css: "md-time"
+    code: 0xF394
+    uid: 68129c27d1b298160a1c22c3ead76662
+    search: []
+
+  - css: "md-timer"
+    code: 0xF395
+    uid: df51d6726ed914a8b27450bd64673974
+    search: []
+
+  - css: "md-train"
+    code: 0xF396
+    uid: c917bc155a68530041804c4647187c74
+    search: []
+
+  - css: "md-transgender"
+    code: 0xF397
+    uid: 2985e600da3bb134b66e66c3908b7659
+    search: []
+
+  - css: "md-trash"
+    code: 0xF398
+    uid: f52fa46af8e50ba20e06c7bb897e13ac
+    search: []
+
+  - css: "md-trending-down"
+    code: 0xF399
+    uid: a502b8f183429077c88c7490af8c4a1b
+    search: []
+
+  - css: "md-trending-up"
+    code: 0xF39A
+    uid: bd188f6add4f6e2bb725e4ca5a6f336b
+    search: []
+
+  - css: "md-trophy"
+    code: 0xF39B
+    uid: 72feea96091758cffb3989c47c533258
+    search: []
+
+  - css: "md-umbrella"
+    code: 0xF39C
+    uid: 704951b1ed49ad1b3617c0b947e03222
+    search: []
+
+  - css: "md-undo"
+    code: 0xF39D
+    uid: 9544e0a185d00d0c800653f802d88dfc
+    search: []
+
+  - css: "md-unlock"
+    code: 0xF39E
+    uid: a938c56a14b36de16a72e64e82c7c3a1
+    search: []
+
+  - css: "md-videocam"
+    code: 0xF39F
+    uid: e6f9c718837104707fb1b6c9a8d4c269
+    search: []
+
+  - css: "md-volume-down"
+    code: 0xF3A0
+    uid: 659e0b087aa87c9c44b9e5766a7b7bc5
+    search: []
+
+  - css: "md-volume-mute"
+    code: 0xF3A1
+    uid: ee1364c55ed5ecbf910e045353e5b9f3
+    search: []
+
+  - css: "md-volume-off"
+    code: 0xF3A2
+    uid: 8f34dee6b0cde0ecded8c372521adad5
+    search: []
+
+  - css: "md-volume-up"
+    code: 0xF3A3
+    uid: 8eafbca73222b84643900608ca1365f0
+    search: []
+
+  - css: "md-walk"
+    code: 0xF3A4
+    uid: 51d559ba078ee5e34c24d77e4ad659b4
+    search: []
+
+  - css: "md-warning"
+    code: 0xF3A5
+    uid: 6cdd122b289b90436de40efc6b77467b
+    search: []
+
+  - css: "md-watch"
+    code: 0xF3A6
+    uid: 329d1a1292d08900a835d5886aa6c324
+    search: []
+
+  - css: "md-water"
+    code: 0xF3A7
+    uid: 7535f4751b951beaf20a3373f7f7a872
+    search: []
+
+  - css: "md-wifi"
+    code: 0xF3A8
+    uid: c83de0b4d3437bd50fe2f19d47522eef
+    search: []
+
+  - css: "md-wine"
+    code: 0xF3A9
+    uid: 18f0491f360213b07fc0c4c6619a1424
+    search: []
+
+  - css: "md-woman"
+    code: 0xF3AA
+    uid: 611221d8e16ea4ca6a371607519024cf
+    search: []
+
